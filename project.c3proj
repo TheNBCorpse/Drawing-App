@@ -32,7 +32,9 @@
 	"autosaveData": null,
 	"containers": [],
 	"families": {
-		"items": [],
+		"items": [
+			"frames"
+		],
 		"subfolders": []
 	},
 	"layouts": {

@@ -1,5 +1,31 @@
 {
 	"name": "Event sheet 1",
-	"events": [],
+	"events": [
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "interactivity",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "for-each",
+							"objectClass": "System",
+							"sid": 768346755212225,
+							"parameters": {
+								"object": "frames"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 795795997076350
+				}
+			],
+			"sid": 232524596064618
+		}
+	],
 	"sid": 940250538470575
 }

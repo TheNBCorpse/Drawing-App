@@ -1,0 +1,26 @@
+{
+	"name": "frames",
+	"plugin-id": "DrawingCanvas",
+	"sid": 657357032011532,
+	"instanceVariables": [
+		{
+			"name": "index",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 784260990141216
+		},
+		{
+			"name": "selected",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 272020301177254
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"frame"
+	]
+}
