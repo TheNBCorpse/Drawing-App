@@ -1,0 +1,28 @@
+{
+	"name": "area_selection",
+	"plugin-id": "NinePatch",
+	"sid": 244650780274125,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "destroy",
+			"name": "DestroyOutsideLayout",
+			"sid": 841671443625010
+		}
+	],
+	"effectTypes": [],
+	"image": {
+		"width": 11,
+		"height": 11,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "lossless",
+		"exportQuality": 0.8,
+		"fileType": "image/png",
+		"imageSpriteId": 8537432,
+		"useCollisionPoly": true,
+		"tag": ""
+	}
+}

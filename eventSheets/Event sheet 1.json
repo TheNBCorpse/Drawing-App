@@ -3,43 +3,41 @@
 	"events": [
 		{
 			"eventType": "variable",
-			"name": "tool",
-			"type": "number",
-			"initialValue": "0",
-			"comment": "",
-			"isStatic": false,
-			"isConstant": false,
-			"sid": 604348611936406
-		},
-		{
-			"eventType": "variable",
 			"name": "ui",
 			"type": "boolean",
 			"initialValue": "false",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
-			"sid": 446265895661716
+			"sid": 610885230335979
+		},
+		{
+			"eventType": "comment",
+			"text": ""
+		},
+		{
+			"eventType": "variable",
+			"name": "tool",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 837726710968852
 		},
 		{
 			"eventType": "variable",
 			"name": "size",
 			"type": "number",
-			"initialValue": "50",
+			"initialValue": "10",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 455614280452529
 		},
 		{
-			"eventType": "variable",
-			"name": "smooth",
-			"type": "boolean",
-			"initialValue": "false",
-			"comment": "",
-			"isStatic": false,
-			"isConstant": false,
-			"sid": 512424046326064
+			"eventType": "comment",
+			"text": ""
 		},
 		{
 			"eventType": "group",
@@ -138,9 +136,12 @@
 							}
 						},
 						{
-							"id": "is-in-touch",
+							"id": "is-touching-object",
 							"objectClass": "touch",
-							"sid": 858555713373133
+							"sid": 909699985859258,
+							"parameters": {
+								"object": "frame"
+							}
 						},
 						{
 							"id": "trigger-once-while-true",
@@ -216,7 +217,7 @@
 						{
 							"id": "line",
 							"objectClass": "frame",
-							"sid": 168579993461721,
+							"sid": 559160799354410,
 							"parameters": {
 								"x1": "touchX",
 								"y1": "touchY",
@@ -230,27 +231,27 @@
 						{
 							"id": "fill-ellipse",
 							"objectClass": "frame",
-							"sid": 900250789140501,
-							"parameters": {
-								"x": "touchX",
-								"y": "touchY",
-								"radius-x": "size / 2",
-								"radius-y": "size / 2",
-								"color": "rgba255(0, 0, 0, 255)",
-								"edge": "smooth"
-							}
-						},
-						{
-							"id": "fill-ellipse",
-							"objectClass": "frame",
-							"sid": 307655147471302,
+							"sid": 445723391454138,
 							"parameters": {
 								"x": "touch.X",
 								"y": "touch.Y",
 								"radius-x": "size / 2",
 								"radius-y": "size / 2",
 								"color": "rgba255(0, 0, 0, 255)",
-								"edge": "smooth"
+								"edge": "hard"
+							}
+						},
+						{
+							"id": "fill-ellipse",
+							"objectClass": "frame",
+							"sid": 794256093637111,
+							"parameters": {
+								"x": "touch.X",
+								"y": "touch.Y",
+								"radius-x": "size / 2",
+								"radius-y": "size / 2",
+								"color": "rgba255(0, 0, 0, 255)",
+								"edge": "hard"
 							}
 						},
 						{
@@ -272,48 +273,72 @@
 							}
 						}
 					],
-					"sid": 116778030242799,
-					"children": [
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "compare-boolean-eventvar",
-									"objectClass": "System",
-									"sid": 329330373499283,
-									"parameters": {
-										"variable": "smooth"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "fill-ellipse",
-									"objectClass": "frame",
-									"sid": 407811274417576,
-									"parameters": {
-										"x": "touch.X",
-										"y": "touch.Y",
-										"radius-x": "size / 2",
-										"radius-y": "size / 2",
-										"color": "rgba255(0, 0, 0, 255)",
-										"edge": "smooth"
-									}
-								}
-							],
-							"sid": 714396152607268,
-							"disabled": true
-						},
-						{
-							"eventType": "block",
-							"conditions": [],
-							"actions": [],
-							"sid": 767212711263861
-						}
-					]
+					"sid": 116778030242799
 				}
 			],
 			"sid": 742850668989971
+		},
+		{
+			"eventType": "group",
+			"disabled": true,
+			"title": "debug",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "keyboard",
+							"sid": 885971601460640,
+							"parameters": {
+								"key": 111
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 209076997616915,
+							"parameters": {
+								"variable": "tool",
+								"value": "-1"
+							}
+						}
+					],
+					"sid": 934453721695896,
+					"disabled": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "keyboard",
+							"sid": 608072252224926,
+							"parameters": {
+								"key": 106
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 587630137894281,
+							"parameters": {
+								"variable": "tool",
+								"value": "0"
+							}
+						}
+					],
+					"sid": 810758397034507,
+					"disabled": true
+				}
+			],
+			"sid": 341663525281782
 		}
 	],
 	"sid": 940250538470575
