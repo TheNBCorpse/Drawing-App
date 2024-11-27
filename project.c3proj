@@ -8,8 +8,36 @@
 	"usedAddons": [
 		{
 			"type": "plugin",
+			"id": "Browser",
+			"name": "Browser",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "DrawingCanvas",
 			"name": "Drawing canvas",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Keyboard",
+			"name": "Keyboard",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Mouse",
+			"name": "Mouse",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "PlatformInfo",
+			"name": "Platform info",
 			"author": "Scirra",
 			"bundled": false
 		},
@@ -19,15 +47,45 @@
 			"name": "Tiled Background",
 			"author": "Scirra",
 			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Touch",
+			"name": "Touch",
+			"author": "Scirra",
+			"bundled": false
 		}
 	],
 	"uniqueId": "qc7bxixgmpj",
 	"objectTypes": {
-		"items": [
-			"area_background",
-			"frame"
-		],
-		"subfolders": []
+		"items": [],
+		"subfolders": [
+			{
+				"items": [
+					"browser",
+					"keyboard",
+					"mouse",
+					"info",
+					"touch"
+				],
+				"subfolders": [],
+				"name": "plugins"
+			},
+			{
+				"items": [
+					"frame"
+				],
+				"subfolders": [],
+				"name": "drawing"
+			},
+			{
+				"items": [
+					"area_background"
+				],
+				"subfolders": [],
+				"name": "ui"
+			}
+		]
 	},
 	"autosaveData": null,
 	"containers": [],

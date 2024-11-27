@@ -1,0 +1,12 @@
+{
+	"name": "info",
+	"plugin-id": "PlatformInfo",
+	"sid": 137301045951305,
+	"singleglobal-inst": {
+		"type": "info",
+		"properties": {},
+		"uid": 7,
+		"sid": 461962322374937,
+		"tags": ""
+	}
+}
