@@ -1,27 +1,27 @@
 {
-	"name": "area_selection",
-	"plugin-id": "NinePatch",
-	"sid": 244650780274125,
+	"name": "area_fill",
+	"plugin-id": "TiledBg",
+	"sid": 956503050196309,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [
 		{
 			"behaviorId": "destroy",
 			"name": "DestroyOutsideLayout",
-			"sid": 841671443625010
+			"sid": 329700797658414
 		}
 	],
 	"effectTypes": [],
 	"image": {
-		"width": 11,
-		"height": 11,
+		"width": 100,
+		"height": 100,
 		"originX": 0.5,
 		"originY": 0.5,
 		"originalSource": "",
 		"exportFormat": "lossless",
 		"exportQuality": 0.8,
 		"fileType": "image/png",
-		"imageSpriteId": 8537432,
+		"imageSpriteId": 5252779,
 		"useCollisionPoly": true,
 		"tag": ""
 	}

@@ -50,6 +50,20 @@
 		},
 		{
 			"type": "plugin",
+			"id": "Sprite",
+			"name": "Sprite",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "TextBox",
+			"name": "Text input",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "TiledBg",
 			"name": "Tiled Background",
 			"author": "Scirra",
@@ -64,6 +78,13 @@
 		},
 		{
 			"type": "behavior",
+			"id": "Tween",
+			"name": "Tween",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
 			"id": "destroy",
 			"name": "Destroy outside layout",
 			"author": "Scirra",
@@ -73,7 +94,10 @@
 	"uniqueId": "qc7bxixgmpj",
 	"objectTypes": {
 		"items": [
-			"area_selection"
+			"ui_colorpreview",
+			"ui_colorR",
+			"ui_colorG",
+			"ui_colorB"
 		],
 		"subfolders": [
 			{
@@ -96,7 +120,10 @@
 			},
 			{
 				"items": [
-					"area_background"
+					"area_background",
+					"area_selection",
+					"area_fill",
+					"ui_left"
 				],
 				"subfolders": [],
 				"name": "ui"
@@ -107,7 +134,7 @@
 	"containers": [],
 	"families": {
 		"items": [
-			"frames"
+			"FRAMES"
 		],
 		"subfolders": []
 	},
@@ -263,7 +290,7 @@
 		"framerateMode": "vsync",
 		"sampling": "nearest",
 		"downscaling": "medium",
-		"renderingMode": "auto",
+		"renderingMode": "2d",
 		"anisotropicFiltering": "auto",
 		"zNear": 1,
 		"zFar": 10000,
