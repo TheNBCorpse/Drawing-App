@@ -535,25 +535,33 @@
 						{
 							"id": "set-text",
 							"objectClass": "ui_colorR",
-							"sid": 911109894325445,
+							"sid": 927866479389245,
 							"parameters": {
-								"text": "clamp(float(Self.Text), 0, 255)"
+								"text": "clamp(int(Self.Text), 0, 255)"
 							}
 						},
 						{
 							"id": "set-text",
 							"objectClass": "ui_colorG",
-							"sid": 823953222335899,
+							"sid": 212645613685412,
 							"parameters": {
-								"text": "clamp(float(Self.Text), 0, 255)"
+								"text": "clamp(int(Self.Text), 0, 255)"
 							}
 						},
 						{
 							"id": "set-text",
 							"objectClass": "ui_colorB",
-							"sid": 802083473848675,
+							"sid": 613075320581472,
 							"parameters": {
-								"text": "clamp(float(Self.Text), 0, 255)"
+								"text": "clamp(int(Self.Text), 0, 255)"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "ui_opacity",
+							"sid": 972319564698487,
+							"parameters": {
+								"text": "clamp(int(Self.Text), 0, 100)"
 							}
 						},
 						{
@@ -563,9 +571,143 @@
 							"parameters": {
 								"color": "rgbEx255(int(ui_colorR.Text), int(ui_colorG.Text), int(ui_colorB.Text))"
 							}
+						},
+						{
+							"id": "set-opacity",
+							"objectClass": "ui_colorpreview",
+							"sid": 339013016319835,
+							"parameters": {
+								"opacity": "int(ui_opacity.Text)"
+							}
 						}
 					],
 					"sid": 149947849648708
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-changing",
+							"objectClass": "ui_sliderR",
+							"sid": 787613913256936
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "ui_colorR",
+							"sid": 592952544004670,
+							"parameters": {
+								"text": "ui_sliderR.Value"
+							}
+						}
+					],
+					"sid": 255704603927758
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-changing",
+							"objectClass": "ui_sliderG",
+							"sid": 260307876058482
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "ui_colorG",
+							"sid": 814280198141539,
+							"parameters": {
+								"text": "ui_sliderG.Value"
+							}
+						}
+					],
+					"sid": 419899835537898
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-changing",
+							"objectClass": "ui_sliderB",
+							"sid": 302503463552087
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "ui_colorB",
+							"sid": 599320877440882,
+							"parameters": {
+								"text": "ui_sliderB.Value"
+							}
+						}
+					],
+					"sid": 872081516191354
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-text-changed",
+							"objectClass": "ui_colorR",
+							"sid": 322867245478185
+						}
+					],
+					"actions": [
+						{
+							"id": "set-value",
+							"objectClass": "ui_sliderR",
+							"sid": 525678906577549,
+							"parameters": {
+								"value": "int(ui_colorR.Text)"
+							}
+						}
+					],
+					"sid": 112115463469162
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-text-changed",
+							"objectClass": "ui_colorG",
+							"sid": 198551340076643
+						}
+					],
+					"actions": [
+						{
+							"id": "set-value",
+							"objectClass": "ui_sliderG",
+							"sid": 561392935859793,
+							"parameters": {
+								"value": "int(ui_colorG.Text)"
+							}
+						}
+					],
+					"sid": 472316515959260
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-text-changed",
+							"objectClass": "ui_colorB",
+							"sid": 239951260704714
+						}
+					],
+					"actions": [
+						{
+							"id": "set-value",
+							"objectClass": "ui_sliderB",
+							"sid": 165575649545438,
+							"parameters": {
+								"value": "int(ui_colorB.Text)"
+							}
+						}
+					],
+					"sid": 920508570709186
 				}
 			],
 			"sid": 294647825430837

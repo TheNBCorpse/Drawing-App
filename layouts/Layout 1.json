@@ -419,9 +419,9 @@
 					"locked": false,
 					"world": {
 						"x": 100,
-						"y": 162.5,
+						"y": 192.5,
 						"width": 150,
-						"height": 275,
+						"height": 335,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -467,7 +467,7 @@
 						"x": 200,
 						"y": 25,
 						"width": 225,
-						"height": 75,
+						"height": 50,
 						"originX": 0,
 						"originY": 0,
 						"color": [
@@ -509,9 +509,9 @@
 					"locked": false,
 					"world": {
 						"x": 200,
-						"y": 125,
+						"y": 100,
 						"width": 225,
-						"height": 75,
+						"height": 50,
 						"originX": 0,
 						"originY": 0,
 						"color": [
@@ -553,9 +553,221 @@
 					"locked": false,
 					"world": {
 						"x": 200,
-						"y": 225,
+						"y": 175,
 						"width": 225,
-						"height": 75,
+						"height": 50,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						]
+					}
+				},
+				{
+					"type": "ui_sliderR",
+					"properties": {
+						"value": 0,
+						"minimum": 0,
+						"maximum": 255,
+						"step": 1,
+						"tooltip": "",
+						"initially-visible": true,
+						"enabled": true,
+						"id": "",
+						"class": ""
+					},
+					"uid": 16,
+					"sid": 520707588105843,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 520707588105843,
+						"expanded": true,
+						"folderName": "",
+						"indexInFolder": -1,
+						"folderNestingLevel": -1
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 25,
+						"y": 385,
+						"width": 400,
+						"height": 25,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						]
+					}
+				},
+				{
+					"type": "ui_sliderG",
+					"properties": {
+						"value": 0,
+						"minimum": 0,
+						"maximum": 255,
+						"step": 1,
+						"tooltip": "",
+						"initially-visible": true,
+						"enabled": true,
+						"id": "",
+						"class": ""
+					},
+					"uid": 17,
+					"sid": 824821712748883,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 824821712748883,
+						"expanded": true,
+						"folderName": "",
+						"indexInFolder": -1,
+						"folderNestingLevel": -1
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 25,
+						"y": 440,
+						"width": 400,
+						"height": 25,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						]
+					}
+				},
+				{
+					"type": "ui_sliderB",
+					"properties": {
+						"value": 0,
+						"minimum": 0,
+						"maximum": 255,
+						"step": 1,
+						"tooltip": "",
+						"initially-visible": true,
+						"enabled": true,
+						"id": "",
+						"class": ""
+					},
+					"uid": 18,
+					"sid": 557808639809979,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 557808639809979,
+						"expanded": true,
+						"folderName": "",
+						"indexInFolder": -1,
+						"folderNestingLevel": -1
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 25,
+						"y": 495,
+						"width": 400,
+						"height": 25,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						]
+					}
+				},
+				{
+					"type": "ui_opacity",
+					"properties": {
+						"text": "100",
+						"placeholder": "",
+						"tooltip": "",
+						"initially-visible": true,
+						"enabled": true,
+						"read-only": false,
+						"spell-check": false,
+						"type": "number",
+						"auto-font-size": false,
+						"id": "",
+						"class": ""
+					},
+					"uid": 19,
+					"sid": 813900404711739,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 813900404711739,
+						"expanded": true,
+						"folderName": "",
+						"indexInFolder": -1,
+						"folderNestingLevel": -1
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 200,
+						"y": 250,
+						"width": 225,
+						"height": 50,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						]
+					}
+				},
+				{
+					"type": "ui_sliderO",
+					"properties": {
+						"value": 0,
+						"minimum": 0,
+						"maximum": 255,
+						"step": 1,
+						"tooltip": "",
+						"initially-visible": true,
+						"enabled": true,
+						"id": "",
+						"class": ""
+					},
+					"uid": 20,
+					"sid": 350399601519885,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 350399601519885,
+						"expanded": true,
+						"folderName": "",
+						"indexInFolder": -1,
+						"folderNestingLevel": -1
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 25,
+						"y": 550,
+						"width": 400,
+						"height": 25,
 						"originX": 0,
 						"originY": 0,
 						"color": [

@@ -77,6 +77,13 @@
 			"bundled": false
 		},
 		{
+			"type": "plugin",
+			"id": "sliderbar",
+			"name": "Slider bar",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
 			"type": "behavior",
 			"id": "Tween",
 			"name": "Tween",
@@ -93,12 +100,7 @@
 	],
 	"uniqueId": "qc7bxixgmpj",
 	"objectTypes": {
-		"items": [
-			"ui_colorpreview",
-			"ui_colorR",
-			"ui_colorG",
-			"ui_colorB"
-		],
+		"items": [],
 		"subfolders": [
 			{
 				"items": [
@@ -123,7 +125,16 @@
 					"area_background",
 					"area_selection",
 					"area_fill",
-					"ui_left"
+					"ui_left",
+					"ui_colorB",
+					"ui_colorG",
+					"ui_colorpreview",
+					"ui_colorR",
+					"ui_sliderB",
+					"ui_sliderG",
+					"ui_sliderR",
+					"ui_opacity",
+					"ui_sliderO"
 				],
 				"subfolders": [],
 				"name": "ui"
