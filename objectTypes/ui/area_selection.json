@@ -3,7 +3,15 @@
 	"plugin-id": "NinePatch",
 	"sid": 244650780274125,
 	"isGlobal": false,
-	"instanceVariables": [],
+	"instanceVariables": [
+		{
+			"name": "locked",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 793000193455378
+		}
+	],
 	"behaviorTypes": [
 		{
 			"behaviorId": "destroy",

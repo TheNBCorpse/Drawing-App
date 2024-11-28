@@ -111,6 +111,53 @@
 							"sid": 824226937768159
 						}
 					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 800310307320743
+						}
+					],
+					"actions": [
+						{
+							"id": "add-child",
+							"objectClass": "ui_leftbutton",
+							"sid": 375705531398496,
+							"parameters": {
+								"child": "ui_left",
+								"transform-x": true,
+								"transform-y": false,
+								"transform-w": false,
+								"transform-h": false,
+								"transform-a": false,
+								"transform-o": false,
+								"transform-z-elevation": false,
+								"transform-visibility": false,
+								"destroy-with-parent": false
+							}
+						},
+						{
+							"id": "add-child",
+							"objectClass": "ui_leftbutton",
+							"sid": 954623312062069,
+							"parameters": {
+								"child": "LEFT_BOXES",
+								"transform-x": true,
+								"transform-y": false,
+								"transform-w": false,
+								"transform-h": false,
+								"transform-a": false,
+								"transform-o": false,
+								"transform-z-elevation": false,
+								"transform-visibility": false,
+								"destroy-with-parent": false
+							}
+						}
+					],
+					"sid": 872057761333094
 				}
 			],
 			"sid": 232524596064618
@@ -451,7 +498,7 @@
 						{
 							"id": "is-touching-object",
 							"objectClass": "touch",
-							"sid": 644868119395430,
+							"sid": 259671347921194,
 							"parameters": {
 								"object": "ui_left"
 							},
@@ -477,7 +524,7 @@
 						{
 							"id": "create-object",
 							"objectClass": "System",
-							"sid": 253758647175966,
+							"sid": 423952615617161,
 							"parameters": {
 								"object-to-create": "area_selection",
 								"layer": "\"between\"",
@@ -497,6 +544,15 @@
 							"id": "is-in-touch",
 							"objectClass": "touch",
 							"sid": 341852862646383
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "area_selection",
+							"sid": 387620356585047,
+							"parameters": {
+								"instance-variable": "locked"
+							},
+							"isInverted": true
 						}
 					],
 					"actions": [
@@ -511,6 +567,28 @@
 						}
 					],
 					"sid": 799240469451426
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-any-touch-end",
+							"objectClass": "touch",
+							"sid": 281703287522846
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "area_selection",
+							"sid": 323158882418227,
+							"parameters": {
+								"instance-variable": "locked",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 140844110887634
 				}
 			],
 			"sid": 742850668989971

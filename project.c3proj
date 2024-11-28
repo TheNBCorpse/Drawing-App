@@ -147,7 +147,8 @@
 	"containers": [],
 	"families": {
 		"items": [
-			"FRAMES"
+			"FRAMES",
+			"LEFT_BOXES"
 		],
 		"subfolders": []
 	},

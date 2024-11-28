@@ -1,0 +1,13 @@
+{
+	"name": "LEFT_BOXES",
+	"plugin-id": "TextBox",
+	"sid": 672878796099989,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"members": [
+		"ui_colorB",
+		"ui_colorG",
+		"ui_colorR",
+		"ui_opacity"
+	]
+}

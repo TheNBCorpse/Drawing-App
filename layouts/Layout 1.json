@@ -183,7 +183,9 @@
 					"uid": 9,
 					"sid": 117126793896514,
 					"tags": "",
-					"instanceVariables": {},
+					"instanceVariables": {
+						"locked": false
+					},
 					"behaviors": {
 						"DestroyOutsideLayout": {
 							"properties": {}
