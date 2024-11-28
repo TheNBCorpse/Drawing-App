@@ -100,7 +100,9 @@
 	],
 	"uniqueId": "qc7bxixgmpj",
 	"objectTypes": {
-		"items": [],
+		"items": [
+			"ui_leftbutton"
+		],
 		"subfolders": [
 			{
 				"items": [

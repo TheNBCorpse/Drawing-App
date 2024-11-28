@@ -361,13 +361,7 @@
 					"sid": 792995256668540,
 					"tags": "",
 					"instanceVariables": {},
-					"behaviors": {
-						"Tween": {
-							"properties": {
-								"enabled": true
-							}
-						}
-					},
+					"behaviors": {},
 					"instanceFolderItem": {
 						"sid": 792995256668540,
 						"expanded": true,
@@ -388,7 +382,7 @@
 							1,
 							1,
 							1,
-							0.65
+							1
 						],
 						"angle": 0,
 						"zElevation": 0
@@ -419,9 +413,9 @@
 					"locked": false,
 					"world": {
 						"x": 100,
-						"y": 192.5,
+						"y": 162.5,
 						"width": 150,
-						"height": 335,
+						"height": 275,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -595,7 +589,7 @@
 					"locked": false,
 					"world": {
 						"x": 25,
-						"y": 385,
+						"y": 325,
 						"width": 400,
 						"height": 25,
 						"originX": 0,
@@ -637,7 +631,7 @@
 					"locked": false,
 					"world": {
 						"x": 25,
-						"y": 440,
+						"y": 380,
 						"width": 400,
 						"height": 25,
 						"originX": 0,
@@ -679,7 +673,7 @@
 					"locked": false,
 					"world": {
 						"x": 25,
-						"y": 495,
+						"y": 435,
 						"width": 400,
 						"height": 25,
 						"originX": 0,
@@ -739,9 +733,9 @@
 				{
 					"type": "ui_sliderO",
 					"properties": {
-						"value": 0,
+						"value": 100,
 						"minimum": 0,
-						"maximum": 255,
+						"maximum": 100,
 						"step": 1,
 						"tooltip": "",
 						"initially-visible": true,
@@ -765,7 +759,7 @@
 					"locked": false,
 					"world": {
 						"x": 25,
-						"y": 550,
+						"y": 490,
 						"width": 400,
 						"height": 25,
 						"originX": 0,
@@ -776,6 +770,52 @@
 							1,
 							1
 						]
+					}
+				},
+				{
+					"type": "ui_leftbutton",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 21,
+					"sid": 118724272402452,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 118724272402452,
+						"expanded": true,
+						"folderName": "",
+						"indexInFolder": -1,
+						"folderNestingLevel": -1
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 450,
+						"y": 0,
+						"width": 200,
+						"height": 200,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
 					}
 				}
 			],

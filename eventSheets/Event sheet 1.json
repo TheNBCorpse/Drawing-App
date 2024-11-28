@@ -19,7 +19,7 @@
 			"eventType": "variable",
 			"name": "tool",
 			"type": "number",
-			"initialValue": "2",
+			"initialValue": "3",
 			"comment": "0 brush 1 erase 2 rectangle 3 select",
 			"isStatic": false,
 			"isConstant": false,
@@ -650,6 +650,27 @@
 					"eventType": "block",
 					"conditions": [
 						{
+							"id": "on-changing",
+							"objectClass": "ui_sliderO",
+							"sid": 377440583938248
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "ui_opacity",
+							"sid": 267113015721954,
+							"parameters": {
+								"text": "ui_sliderO.Value"
+							}
+						}
+					],
+					"sid": 249307015718522
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
 							"id": "on-text-changed",
 							"objectClass": "ui_colorR",
 							"sid": 322867245478185
@@ -708,6 +729,27 @@
 						}
 					],
 					"sid": 920508570709186
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-text-changed",
+							"objectClass": "ui_opacity",
+							"sid": 986293703034403
+						}
+					],
+					"actions": [
+						{
+							"id": "set-value",
+							"objectClass": "ui_sliderO",
+							"sid": 948284914100939,
+							"parameters": {
+								"value": "int(ui_opacity.Text)"
+							}
+						}
+					],
+					"sid": 645563108871066
 				}
 			],
 			"sid": 294647825430837

@@ -4,13 +4,7 @@
 	"sid": 662748114962395,
 	"isGlobal": false,
 	"instanceVariables": [],
-	"behaviorTypes": [
-		{
-			"behaviorId": "Tween",
-			"name": "Tween",
-			"sid": 903170622401208
-		}
-	],
+	"behaviorTypes": [],
 	"effectTypes": [],
 	"image": {
 		"width": 250,
@@ -21,7 +15,7 @@
 		"exportFormat": "lossless",
 		"exportQuality": 0.8,
 		"fileType": "image/png",
-		"imageSpriteId": 5294375,
+		"imageSpriteId": 1087320,
 		"useCollisionPoly": true,
 		"tag": ""
 	}
