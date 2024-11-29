@@ -1,0 +1,11 @@
+{
+	"name": "TOUCH_SPRITES",
+	"plugin-id": "Sprite",
+	"sid": 850372449233296,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"ui_leftbutton"
+	]
+}

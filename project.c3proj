@@ -135,7 +135,9 @@
 					"ui_sliderR",
 					"ui_opacity",
 					"ui_sliderO",
-					"ui_leftbutton"
+					"ui_leftbutton",
+					"ui_right",
+					"ui_rightbutton"
 				],
 				"subfolders": [],
 				"name": "ui"
@@ -148,7 +150,8 @@
 		"items": [
 			"FRAMES",
 			"LEFT_BOXES",
-			"LEFT_SLIDERS"
+			"LEFT_SLIDERS",
+			"TOUCH_SPRITES"
 		],
 		"subfolders": []
 	},

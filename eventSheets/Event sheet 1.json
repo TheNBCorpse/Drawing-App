@@ -215,6 +215,53 @@
 							"parameters": {
 								"height": "ViewportHeight(\"ui\")"
 							}
+						},
+						{
+							"type": "comment",
+							"text": ""
+						},
+						{
+							"id": "add-child",
+							"objectClass": "ui_rightbutton",
+							"sid": 766646259270325,
+							"parameters": {
+								"child": "ui_right",
+								"transform-x": true,
+								"transform-y": false,
+								"transform-w": false,
+								"transform-h": false,
+								"transform-a": false,
+								"transform-o": false,
+								"transform-z-elevation": false,
+								"transform-visibility": false,
+								"destroy-with-parent": false
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "ui_rightbutton",
+							"sid": 578286236017291,
+							"parameters": {
+								"x": "ViewportRight(\"ui\")",
+								"y": "ViewportTop(\"ui\")"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "ui_right",
+							"sid": 505852811008575,
+							"parameters": {
+								"x": "ViewportRight(\"ui\") + Self.Width",
+								"y": "ViewportTop(\"ui\")"
+							}
+						},
+						{
+							"id": "set-height",
+							"objectClass": "ui_right",
+							"sid": 183197002133132,
+							"parameters": {
+								"height": "ViewportHeight(\"ui\")"
+							}
 						}
 					],
 					"sid": 872057761333094
@@ -266,6 +313,51 @@
 							"id": "set-height",
 							"objectClass": "ui_left",
 							"sid": 241505566746575,
+							"parameters": {
+								"height": "ViewportHeight(\"ui\")"
+							}
+						},
+						{
+							"type": "comment",
+							"text": ""
+						},
+						{
+							"id": "stop-all-tweens",
+							"objectClass": "ui_rightbutton",
+							"sid": 604863847725916,
+							"behaviorType": "Tween"
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "ui_rightbutton",
+							"sid": 860450309746384,
+							"parameters": {
+								"instance-variable": "open",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "ui_rightbutton",
+							"sid": 464808846886404,
+							"parameters": {
+								"x": "ViewportRight(\"ui\")",
+								"y": "ViewportTop(\"ui\")"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "ui_right",
+							"sid": 468767453259685,
+							"parameters": {
+								"x": "ViewportRight(\"ui\") + Self.Width",
+								"y": "ViewportTop(\"ui\")"
+							}
+						},
+						{
+							"id": "set-height",
+							"objectClass": "ui_right",
+							"sid": 635659474612478,
 							"parameters": {
 								"height": "ViewportHeight(\"ui\")"
 							}
@@ -359,10 +451,10 @@
 								{
 									"id": "tween-one-property",
 									"objectClass": "ui_leftbutton",
-									"sid": 726718958321622,
+									"sid": 898378198964698,
 									"behaviorType": "Tween",
 									"parameters": {
-										"tags": "\"open\"",
+										"tags": "\"close\"",
 										"property": "offsetX",
 										"end-value": "ViewportLeft(\"ui\")",
 										"time": "0.1",
@@ -389,6 +481,125 @@
 								}
 							],
 							"sid": 714842333066249
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "touch",
+							"sid": 688348762002096,
+							"parameters": {
+								"object": "ui_rightbutton"
+							}
+						},
+						{
+							"id": "is-any-playing",
+							"objectClass": "ui_rightbutton",
+							"sid": 860326457514974,
+							"behaviorType": "Tween",
+							"isInverted": true
+						}
+					],
+					"actions": [],
+					"sid": 672234030766222,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "ui_rightbutton",
+									"sid": 200546228609458,
+									"parameters": {
+										"instance-variable": "open"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "tween-one-property",
+									"objectClass": "ui_rightbutton",
+									"sid": 594347266098176,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"open\"",
+										"property": "offsetX",
+										"end-value": "ViewportRight(\"ui\") - ui_right.Width",
+										"time": "0.1",
+										"ease": "default",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no",
+										"repeat-count": "1"
+									}
+								},
+								{
+									"id": "wait-for-previous-actions",
+									"objectClass": "System",
+									"sid": 389889439559106
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "ui_rightbutton",
+									"sid": 156549154581571,
+									"parameters": {
+										"instance-variable": "open",
+										"value": "true"
+									}
+								}
+							],
+							"sid": 468602669395896
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "ui_rightbutton",
+									"sid": 472565191385162,
+									"parameters": {
+										"instance-variable": "open"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "tween-one-property",
+									"objectClass": "ui_rightbutton",
+									"sid": 775578199095122,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"close\"",
+										"property": "offsetX",
+										"end-value": "ViewportRight(\"ui\")",
+										"time": "0.1",
+										"ease": "default",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no",
+										"repeat-count": "1"
+									}
+								},
+								{
+									"id": "wait-for-previous-actions",
+									"objectClass": "System",
+									"sid": 310268797100449
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "ui_rightbutton",
+									"sid": 392520411200476,
+									"parameters": {
+										"instance-variable": "open",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 244754162084785
 						}
 					]
 				}
@@ -438,6 +649,24 @@
 							"sid": 448917025266997,
 							"parameters": {
 								"object": "ui_leftbutton"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "touch",
+							"sid": 158310798036363,
+							"parameters": {
+								"object": "ui_right"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "touch",
+							"sid": 243258347878480,
+							"parameters": {
+								"object": "ui_rightbutton"
 							},
 							"isInverted": true
 						},
@@ -527,6 +756,24 @@
 								"object": "ui_leftbutton"
 							},
 							"isInverted": true
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "touch",
+							"sid": 330416461191684,
+							"parameters": {
+								"object": "ui_right"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "touch",
+							"sid": 103973658840267,
+							"parameters": {
+								"object": "ui_rightbutton"
+							},
+							"isInverted": true
 						}
 					],
 					"actions": [
@@ -614,6 +861,24 @@
 							"sid": 502538492537435,
 							"parameters": {
 								"object": "ui_leftbutton"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "touch",
+							"sid": 315457736403983,
+							"parameters": {
+								"object": "ui_right"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "touch",
+							"sid": 670411250023670,
+							"parameters": {
+								"object": "ui_rightbutton"
 							},
 							"isInverted": true
 						},
@@ -774,6 +1039,24 @@
 							"isInverted": true
 						},
 						{
+							"id": "is-touching-object",
+							"objectClass": "touch",
+							"sid": 682992050973834,
+							"parameters": {
+								"object": "ui_right"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "touch",
+							"sid": 451394897432747,
+							"parameters": {
+								"object": "ui_rightbutton"
+							},
+							"isInverted": true
+						},
+						{
 							"id": "compare-eventvar",
 							"objectClass": "System",
 							"sid": 987178061242262,
@@ -857,7 +1140,40 @@
 							}
 						}
 					],
-					"sid": 140844110887634
+					"sid": 140844110887634,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-width",
+									"objectClass": "area_selection",
+									"sid": 889351862228572,
+									"parameters": {
+										"comparison": 2,
+										"width": "10"
+									}
+								},
+								{
+									"id": "compare-height",
+									"objectClass": "area_selection",
+									"sid": 426235599727128,
+									"parameters": {
+										"comparison": 2,
+										"height": "10"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "destroy",
+									"objectClass": "area_selection",
+									"sid": 286267951265074
+								}
+							],
+							"sid": 581212608210674
+						}
+					]
 				}
 			],
 			"sid": 742850668989971

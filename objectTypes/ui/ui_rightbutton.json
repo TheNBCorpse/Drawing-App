@@ -1,0 +1,75 @@
+{
+	"name": "ui_rightbutton",
+	"plugin-id": "Sprite",
+	"sid": 396644582696100,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "open",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 458891134832788
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Tween",
+			"name": "Tween",
+			"sid": 639825090980140
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 200,
+						"height": 200,
+						"originX": 1,
+						"originY": 0,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 3414710,
+						"collisionPoly": {
+							"points": [
+								0,
+								0,
+								1,
+								0,
+								1,
+								1,
+								0.315,
+								1,
+								0.185,
+								0.955,
+								0.135,
+								0.92,
+								0.08,
+								0.865,
+								0.045,
+								0.815,
+								0,
+								0.685
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 599823565694649,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}
