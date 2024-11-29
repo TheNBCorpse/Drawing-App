@@ -786,7 +786,9 @@
 					"uid": 21,
 					"sid": 118724272402452,
 					"tags": "",
-					"instanceVariables": {},
+					"instanceVariables": {
+						"open": false
+					},
 					"behaviors": {
 						"Tween": {
 							"properties": {

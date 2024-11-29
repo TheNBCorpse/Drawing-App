@@ -155,9 +155,233 @@
 								"transform-visibility": false,
 								"destroy-with-parent": false
 							}
+						},
+						{
+							"id": "add-child",
+							"objectClass": "ui_leftbutton",
+							"sid": 457858023971243,
+							"parameters": {
+								"child": "ui_colorpreview",
+								"transform-x": true,
+								"transform-y": false,
+								"transform-w": false,
+								"transform-h": false,
+								"transform-a": false,
+								"transform-o": false,
+								"transform-z-elevation": false,
+								"transform-visibility": false,
+								"destroy-with-parent": false
+							}
+						},
+						{
+							"id": "add-child",
+							"objectClass": "ui_leftbutton",
+							"sid": 140995973710206,
+							"parameters": {
+								"child": "LEFT_SLIDERS",
+								"transform-x": true,
+								"transform-y": false,
+								"transform-w": false,
+								"transform-h": false,
+								"transform-a": false,
+								"transform-o": false,
+								"transform-z-elevation": false,
+								"transform-visibility": false,
+								"destroy-with-parent": false
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "ui_leftbutton",
+							"sid": 523410465494001,
+							"parameters": {
+								"x": "ViewportLeft(\"ui\")",
+								"y": "ViewportTop(\"ui\")"
+							}
+						},
+						{
+							"id": "set-height",
+							"objectClass": "ui_left",
+							"sid": 563572942155629,
+							"parameters": {
+								"height": "ViewportHeight(\"ui\")"
+							}
 						}
 					],
 					"sid": 872057761333094
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-resized",
+							"objectClass": "browser",
+							"sid": 793346630154602
+						}
+					],
+					"actions": [
+						{
+							"id": "stop-all-tweens",
+							"objectClass": "ui_leftbutton",
+							"sid": 140594310034919,
+							"behaviorType": "Tween"
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "ui_leftbutton",
+							"sid": 142247892120526,
+							"parameters": {
+								"instance-variable": "open",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "ui_leftbutton",
+							"sid": 146245867485741,
+							"parameters": {
+								"x": "ViewportLeft(\"ui\")",
+								"y": "ViewportTop(\"ui\")"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "ui_left",
+							"sid": 117136562944814,
+							"parameters": {
+								"x": "ViewportLeft(\"ui\") - Self.Width",
+								"y": "ViewportTop(\"ui\")"
+							}
+						},
+						{
+							"id": "set-height",
+							"objectClass": "ui_left",
+							"sid": 241505566746575,
+							"parameters": {
+								"height": "ViewportHeight(\"ui\")"
+							}
+						}
+					],
+					"sid": 431148839465151
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "touch",
+							"sid": 548427828972030,
+							"parameters": {
+								"object": "ui_leftbutton"
+							}
+						},
+						{
+							"id": "is-any-playing",
+							"objectClass": "ui_leftbutton",
+							"sid": 460613587203366,
+							"behaviorType": "Tween",
+							"isInverted": true
+						}
+					],
+					"actions": [],
+					"sid": 223222393806050,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "ui_leftbutton",
+									"sid": 309012592564303,
+									"parameters": {
+										"instance-variable": "open"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "tween-one-property",
+									"objectClass": "ui_leftbutton",
+									"sid": 229882145838777,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"open\"",
+										"property": "offsetX",
+										"end-value": "ViewportLeft(\"ui\") + ui_left.Width",
+										"time": "0.1",
+										"ease": "default",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no",
+										"repeat-count": "1"
+									}
+								},
+								{
+									"id": "wait-for-previous-actions",
+									"objectClass": "System",
+									"sid": 432019406593930
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "ui_leftbutton",
+									"sid": 113346821130548,
+									"parameters": {
+										"instance-variable": "open",
+										"value": "true"
+									}
+								}
+							],
+							"sid": 544050544482231
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "ui_leftbutton",
+									"sid": 777997268306380,
+									"parameters": {
+										"instance-variable": "open"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "tween-one-property",
+									"objectClass": "ui_leftbutton",
+									"sid": 726718958321622,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"open\"",
+										"property": "offsetX",
+										"end-value": "ViewportLeft(\"ui\")",
+										"time": "0.1",
+										"ease": "default",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no",
+										"repeat-count": "1"
+									}
+								},
+								{
+									"id": "wait-for-previous-actions",
+									"objectClass": "System",
+									"sid": 111461023994327
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "ui_leftbutton",
+									"sid": 637246316636994,
+									"parameters": {
+										"instance-variable": "open",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 714842333066249
+						}
+					]
 				}
 			],
 			"sid": 232524596064618

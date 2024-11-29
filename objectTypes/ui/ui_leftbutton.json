@@ -3,7 +3,15 @@
 	"plugin-id": "Sprite",
 	"sid": 574540422282195,
 	"isGlobal": false,
-	"instanceVariables": [],
+	"instanceVariables": [
+		{
+			"name": "open",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 169148688143917
+		}
+	],
 	"behaviorTypes": [
 		{
 			"behaviorId": "Tween",
@@ -26,6 +34,28 @@
 						"exportQuality": 0.8,
 						"fileType": "image/png",
 						"imageSpriteId": 3273423,
+						"collisionPoly": {
+							"points": [
+								0,
+								0,
+								1,
+								0,
+								1,
+								0.685,
+								0.955,
+								0.815,
+								0.92,
+								0.865,
+								0.865,
+								0.92,
+								0.815,
+								0.955,
+								0.685,
+								1,
+								0,
+								1
+							]
+						},
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""

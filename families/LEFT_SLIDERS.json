@@ -1,0 +1,13 @@
+{
+	"name": "LEFT_SLIDERS",
+	"plugin-id": "sliderbar",
+	"sid": 822283541265112,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"members": [
+		"ui_sliderB",
+		"ui_sliderO",
+		"ui_sliderR",
+		"ui_sliderG"
+	]
+}
