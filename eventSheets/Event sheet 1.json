@@ -200,6 +200,15 @@
 							}
 						},
 						{
+							"id": "set-position",
+							"objectClass": "ui_left",
+							"sid": 915395594996042,
+							"parameters": {
+								"x": "ViewportLeft(\"ui\") - Self.Width",
+								"y": "ViewportTop(\"ui\")"
+							}
+						},
+						{
 							"id": "set-height",
 							"objectClass": "ui_left",
 							"sid": 563572942155629,
@@ -424,6 +433,15 @@
 							"isInverted": true
 						},
 						{
+							"id": "is-touching-object",
+							"objectClass": "touch",
+							"sid": 448917025266997,
+							"parameters": {
+								"object": "ui_leftbutton"
+							},
+							"isInverted": true
+						},
+						{
 							"id": "trigger-once-while-true",
 							"objectClass": "System",
 							"sid": 225324496123562
@@ -498,6 +516,15 @@
 							"sid": 399723943636019,
 							"parameters": {
 								"object": "ui_left"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "touch",
+							"sid": 765004897300373,
+							"parameters": {
+								"object": "ui_leftbutton"
 							},
 							"isInverted": true
 						}
@@ -578,6 +605,15 @@
 							"sid": 749024488060564,
 							"parameters": {
 								"object": "ui_left"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "touch",
+							"sid": 502538492537435,
+							"parameters": {
+								"object": "ui_leftbutton"
 							},
 							"isInverted": true
 						},
@@ -725,6 +761,15 @@
 							"sid": 259671347921194,
 							"parameters": {
 								"object": "ui_left"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "touch",
+							"sid": 119751282286472,
+							"parameters": {
+								"object": "ui_leftbutton"
 							},
 							"isInverted": true
 						},
