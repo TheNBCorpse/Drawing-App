@@ -6,6 +6,7 @@
 	"behaviorTypes": [],
 	"effectTypes": [],
 	"members": [
-		"ui_leftbutton"
+		"ui_leftbutton",
+		"ui_rightbutton"
 	]
 }

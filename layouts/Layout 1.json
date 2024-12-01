@@ -201,8 +201,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": -25,
-						"y": -202,
+						"x": -1000,
+						"y": -1000,
 						"width": 100,
 						"height": 100,
 						"originX": 0,
@@ -324,8 +324,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 272,
-						"y": -267,
+						"x": -1000,
+						"y": -1000,
 						"width": 100,
 						"height": 100,
 						"originX": 0,
@@ -415,9 +415,9 @@
 					"locked": false,
 					"world": {
 						"x": 100,
-						"y": 162.5,
+						"y": 200,
 						"width": 150,
-						"height": 275,
+						"height": 200,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -461,7 +461,7 @@
 					"locked": false,
 					"world": {
 						"x": 200,
-						"y": 25,
+						"y": 100,
 						"width": 225,
 						"height": 50,
 						"originX": 0,
@@ -505,7 +505,7 @@
 					"locked": false,
 					"world": {
 						"x": 200,
-						"y": 100,
+						"y": 175,
 						"width": 225,
 						"height": 50,
 						"originX": 0,
@@ -549,7 +549,7 @@
 					"locked": false,
 					"world": {
 						"x": 200,
-						"y": 175,
+						"y": 250,
 						"width": 225,
 						"height": 50,
 						"originX": 0,
@@ -591,7 +591,7 @@
 					"locked": false,
 					"world": {
 						"x": 25,
-						"y": 325,
+						"y": 335,
 						"width": 400,
 						"height": 25,
 						"originX": 0,
@@ -633,7 +633,7 @@
 					"locked": false,
 					"world": {
 						"x": 25,
-						"y": 380,
+						"y": 390,
 						"width": 400,
 						"height": 25,
 						"originX": 0,
@@ -675,7 +675,7 @@
 					"locked": false,
 					"world": {
 						"x": 25,
-						"y": 435,
+						"y": 445,
 						"width": 400,
 						"height": 25,
 						"originX": 0,
@@ -694,8 +694,8 @@
 						"text": "100",
 						"placeholder": "",
 						"tooltip": "",
-						"initially-visible": true,
-						"enabled": true,
+						"initially-visible": false,
+						"enabled": false,
 						"read-only": false,
 						"spell-check": false,
 						"type": "number",
@@ -718,8 +718,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 200,
-						"y": 250,
+						"x": -1000,
+						"y": -1000,
 						"width": 225,
 						"height": 50,
 						"originX": 0,
@@ -740,8 +740,8 @@
 						"maximum": 100,
 						"step": 1,
 						"tooltip": "",
-						"initially-visible": true,
-						"enabled": true,
+						"initially-visible": false,
+						"enabled": false,
 						"id": "",
 						"class": ""
 					},
@@ -760,8 +760,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 25,
-						"y": 490,
+						"x": -1000,
+						"y": -1000,
 						"width": 400,
 						"height": 25,
 						"originX": 0,
@@ -909,6 +909,62 @@
 						"width": 200,
 						"height": 200,
 						"originX": 1,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "ui_textleft",
+					"properties": {
+						"text": "Color & Size",
+						"enable-bbcode": true,
+						"font": "system-ui",
+						"size": 36,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 24,
+					"sid": 752064818147291,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 752064818147291,
+						"expanded": true,
+						"folderName": "",
+						"indexInFolder": -1,
+						"folderNestingLevel": -1
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 25,
+						"y": 25,
+						"width": 400,
+						"height": 50,
+						"originX": 0,
 						"originY": 0,
 						"color": [
 							1,
