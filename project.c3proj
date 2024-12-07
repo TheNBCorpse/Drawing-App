@@ -1,6 +1,6 @@
 {
 	"projectFormatVersion": 1,
-	"savedWithRelease": 41700,
+	"savedWithRelease": 41800,
 	"name": "drawing app",
 	"runtime": "c3",
 	"useWorker": "auto",
@@ -107,9 +107,7 @@
 	],
 	"uniqueId": "qc7bxixgmpj",
 	"objectTypes": {
-		"items": [
-			"ui_textleft"
-		],
+		"items": [],
 		"subfolders": [
 			{
 				"items": [
@@ -146,7 +144,11 @@
 					"ui_sliderO",
 					"ui_leftbutton",
 					"ui_right",
-					"ui_rightbutton"
+					"ui_rightbutton",
+					"ui_textleft",
+					"ui_tool0",
+					"ui_sliderS",
+					"ui_tool1"
 				],
 				"subfolders": [],
 				"name": "ui"
@@ -160,7 +162,8 @@
 			"FRAMES",
 			"LEFT_BOXES",
 			"LEFT_SLIDERS",
-			"TOUCH_SPRITES"
+			"TOUCH_SPRITES",
+			"LEFT_BUTTONS"
 		],
 		"subfolders": []
 	},
@@ -279,6 +282,7 @@
 	"properties": {
 		"description": "",
 		"version": "1.0.0",
+		"autoIncrementVersion": false,
 		"author": "TheNBCorpse",
 		"authorEmail": "",
 		"authorWebsite": "",

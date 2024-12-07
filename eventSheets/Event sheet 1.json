@@ -1029,6 +1029,23 @@
 							}
 						},
 						{
+							"id": "add-child",
+							"objectClass": "ui_leftbutton",
+							"sid": 881412472336899,
+							"parameters": {
+								"child": "LEFT_BUTTONS",
+								"transform-x": true,
+								"transform-y": false,
+								"transform-w": false,
+								"transform-h": false,
+								"transform-a": false,
+								"transform-o": false,
+								"transform-z-elevation": false,
+								"transform-visibility": false,
+								"destroy-with-parent": false
+							}
+						},
+						{
 							"id": "set-position",
 							"objectClass": "ui_leftbutton",
 							"sid": 523410465494001,
