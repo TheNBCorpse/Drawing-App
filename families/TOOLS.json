@@ -1,14 +1,14 @@
 {
-	"name": "LEFT_BUTTONS",
+	"name": "TOOLS",
 	"plugin-id": "Sprite",
-	"sid": 859167234235345,
+	"sid": 815632728299752,
 	"instanceVariables": [],
 	"behaviorTypes": [],
 	"effectTypes": [],
 	"members": [
 		"ui_tool0",
+		"ui_tool3",
 		"ui_tool1",
-		"ui_tool2",
-		"ui_tool3"
+		"ui_tool2"
 	]
 }

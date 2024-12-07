@@ -148,7 +148,9 @@
 					"ui_textleft",
 					"ui_tool0",
 					"ui_sliderS",
-					"ui_tool1"
+					"ui_tool1",
+					"ui_tool2",
+					"ui_tool3"
 				],
 				"subfolders": [],
 				"name": "ui"
@@ -163,7 +165,8 @@
 			"LEFT_BOXES",
 			"LEFT_SLIDERS",
 			"TOUCH_SPRITES",
-			"LEFT_BUTTONS"
+			"LEFT_BUTTONS",
+			"TOOLS"
 		],
 		"subfolders": []
 	},

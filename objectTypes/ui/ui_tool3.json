@@ -1,7 +1,7 @@
 {
-	"name": "ui_tool1",
+	"name": "ui_tool3",
 	"plugin-id": "Sprite",
-	"sid": 225982824026532,
+	"sid": 863655509694898,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [],
@@ -19,13 +19,13 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 9466865,
+						"imageSpriteId": 3363071,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 323084071097116,
+				"sid": 657828531087673,
 				"name": "false",
 				"isLooping": false,
 				"isPingPong": false,
@@ -44,13 +44,13 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 3914136,
+						"imageSpriteId": 6645145,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 633192793532889,
+				"sid": 935027892990083,
 				"name": "true",
 				"isLooping": false,
 				"isPingPong": false,

@@ -7,6 +7,10 @@
 	"effectTypes": [],
 	"members": [
 		"ui_leftbutton",
-		"ui_rightbutton"
+		"ui_rightbutton",
+		"ui_tool0",
+		"ui_tool1",
+		"ui_tool2",
+		"ui_tool3"
 	]
 }

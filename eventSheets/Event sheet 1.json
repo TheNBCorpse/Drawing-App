@@ -856,6 +856,198 @@
 						}
 					],
 					"sid": 440843084916527
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "touch",
+							"sid": 629099588189195,
+							"parameters": {
+								"object": "ui_tool0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "TOOLS",
+							"sid": 540417428565879,
+							"parameters": {
+								"animation": "\"false\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "ui_tool0",
+							"sid": 753612826877473,
+							"parameters": {
+								"animation": "\"true\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 508438316886831,
+							"parameters": {
+								"variable": "tool",
+								"value": "0"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "area_selection",
+							"sid": 941230910677428
+						}
+					],
+					"sid": 212178182882669
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "touch",
+							"sid": 377424498935630,
+							"parameters": {
+								"object": "ui_tool1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "TOOLS",
+							"sid": 800775236497020,
+							"parameters": {
+								"animation": "\"false\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "ui_tool1",
+							"sid": 644174118445882,
+							"parameters": {
+								"animation": "\"true\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 537185120000348,
+							"parameters": {
+								"variable": "tool",
+								"value": "1"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "area_selection",
+							"sid": 886987129832454
+						}
+					],
+					"sid": 466680291907719
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "touch",
+							"sid": 544773358346436,
+							"parameters": {
+								"object": "ui_tool2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "TOOLS",
+							"sid": 798626938267131,
+							"parameters": {
+								"animation": "\"false\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "ui_tool2",
+							"sid": 694852165853084,
+							"parameters": {
+								"animation": "\"true\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 548127510763823,
+							"parameters": {
+								"variable": "tool",
+								"value": "2"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "area_selection",
+							"sid": 704936591133592
+						}
+					],
+					"sid": 988841862020622
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "touch",
+							"sid": 763149041275705,
+							"parameters": {
+								"object": "ui_tool3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "TOOLS",
+							"sid": 742872870573135,
+							"parameters": {
+								"animation": "\"false\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "ui_tool3",
+							"sid": 498714235604464,
+							"parameters": {
+								"animation": "\"true\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 190790605598535,
+							"parameters": {
+								"variable": "tool",
+								"value": "3"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "area_selection",
+							"sid": 944467828344522
+						}
+					],
+					"sid": 740538168762172
 				}
 			],
 			"sid": 916376627265171
@@ -1474,9 +1666,9 @@
 						{
 							"id": "set-default-color",
 							"objectClass": "TOUCH_SPRITES",
-							"sid": 689071037951730,
+							"sid": 730134360167567,
 							"parameters": {
-								"color": "rgbEx(50, 50, 50)"
+								"color": "rgbEx(60, 60, 60)"
 							}
 						}
 					],
