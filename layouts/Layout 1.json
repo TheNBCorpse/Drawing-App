@@ -1001,7 +1001,7 @@
 					"locked": false,
 					"world": {
 						"x": 50,
-						"y": 660,
+						"y": 610,
 						"width": 150,
 						"height": 100,
 						"originX": 0,
@@ -1075,9 +1075,9 @@
 				{
 					"type": "ui_sliderS",
 					"properties": {
-						"value": 0,
-						"minimum": 0,
-						"maximum": 255,
+						"value": 10,
+						"minimum": 1,
+						"maximum": 250,
 						"step": 1,
 						"tooltip": "",
 						"initially-visible": true,
@@ -1139,7 +1139,7 @@
 					"locked": false,
 					"world": {
 						"x": 250,
-						"y": 660,
+						"y": 610,
 						"width": 150,
 						"height": 100,
 						"originX": 0,
@@ -1179,7 +1179,7 @@
 					"locked": false,
 					"world": {
 						"x": 50,
-						"y": 810,
+						"y": 760,
 						"width": 150,
 						"height": 100,
 						"originX": 0,
@@ -1219,7 +1219,7 @@
 					"locked": false,
 					"world": {
 						"x": 250,
-						"y": 810,
+						"y": 760,
 						"width": 150,
 						"height": 100,
 						"originX": 0,
@@ -1237,7 +1237,7 @@
 				{
 					"type": "ui_size",
 					"properties": {
-						"text": "0",
+						"text": "10",
 						"placeholder": "",
 						"tooltip": "",
 						"initially-visible": true,
@@ -1276,6 +1276,46 @@
 							1,
 							1
 						]
+					}
+				},
+				{
+					"type": "ui_colorpreviewframe",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 32,
+					"sid": 649288152842204,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 649288152842204,
+						"expanded": true,
+						"folderName": "",
+						"indexInFolder": -1,
+						"folderNestingLevel": -1
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 225,
+						"y": 345,
+						"width": 400,
+						"height": 100,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
 					}
 				}
 			],

@@ -151,7 +151,8 @@
 					"ui_tool1",
 					"ui_tool2",
 					"ui_tool3",
-					"ui_size"
+					"ui_size",
+					"ui_colorpreviewframe"
 				],
 				"subfolders": [],
 				"name": "ui"

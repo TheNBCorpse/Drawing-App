@@ -671,6 +671,14 @@
 							}
 						},
 						{
+							"id": "set-text",
+							"objectClass": "ui_size",
+							"sid": 921077676507456,
+							"parameters": {
+								"text": "clamp(int(Self.Text), 0, 250)"
+							}
+						},
+						{
 							"id": "set-default-color",
 							"objectClass": "ui_colorpreview",
 							"sid": 456944127311243,
@@ -684,6 +692,23 @@
 							"sid": 462951911190814,
 							"parameters": {
 								"opacity": "int(ui_opacity.Text)"
+							}
+						},
+						{
+							"id": "set-default-color",
+							"objectClass": "ui_colorpreviewframe",
+							"sid": 302767461638707,
+							"parameters": {
+								"color": "rgbEx255(255 - int(ui_colorR.Text), 255 - int(ui_colorG.Text), 255 - int(ui_colorB.Text))"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 851042239630526,
+							"parameters": {
+								"variable": "size",
+								"value": "int(ui_size.Text)"
 							}
 						}
 					],
@@ -777,6 +802,27 @@
 					"eventType": "block",
 					"conditions": [
 						{
+							"id": "on-changing",
+							"objectClass": "ui_sliderS",
+							"sid": 877210746972201
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "ui_size",
+							"sid": 569485381652414,
+							"parameters": {
+								"text": "ui_sliderS.Value"
+							}
+						}
+					],
+					"sid": 190181048750618
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
 							"id": "on-text-changed",
 							"objectClass": "ui_colorR",
 							"sid": 993685860175711
@@ -856,6 +902,27 @@
 						}
 					],
 					"sid": 440843084916527
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-text-changed",
+							"objectClass": "ui_size",
+							"sid": 905522081382117
+						}
+					],
+					"actions": [
+						{
+							"id": "set-value",
+							"objectClass": "ui_sliderS",
+							"sid": 866673637426714,
+							"parameters": {
+								"value": "int(ui_size.Text)"
+							}
+						}
+					],
+					"sid": 594224744297735
 				},
 				{
 					"eventType": "block",
@@ -1175,6 +1242,23 @@
 							"sid": 457858023971243,
 							"parameters": {
 								"child": "ui_colorpreview",
+								"transform-x": true,
+								"transform-y": false,
+								"transform-w": false,
+								"transform-h": false,
+								"transform-a": false,
+								"transform-o": false,
+								"transform-z-elevation": false,
+								"transform-visibility": false,
+								"destroy-with-parent": false
+							}
+						},
+						{
+							"id": "add-child",
+							"objectClass": "ui_leftbutton",
+							"sid": 661171330302239,
+							"parameters": {
+								"child": "ui_colorpreviewframe",
 								"transform-x": true,
 								"transform-y": false,
 								"transform-w": false,
