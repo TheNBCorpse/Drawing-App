@@ -1638,14 +1638,16 @@
 		{
 			"type": "array",
 			"properties": {
-				"width": 10,
+				"width": 1,
 				"height": 1,
 				"depth": 1
 			},
 			"uid": 33,
 			"sid": 717303994510220,
 			"tags": "",
-			"instanceVariables": {}
+			"instanceVariables": {
+				"frame": 0
+			}
 		}
 	],
 	"effectTypes": [],

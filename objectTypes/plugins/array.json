@@ -3,5 +3,13 @@
 	"plugin-id": "Arr",
 	"sid": 501306533169406,
 	"isGlobal": true,
-	"instanceVariables": []
+	"instanceVariables": [
+		{
+			"name": "frame",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 238021043582160
+		}
+	]
 }

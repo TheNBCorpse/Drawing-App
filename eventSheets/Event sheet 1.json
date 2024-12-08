@@ -72,6 +72,16 @@
 							}
 						},
 						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 474595156539127,
+							"parameters": {
+								"first-value": "touch.TouchCount",
+								"comparison": 0,
+								"second-value": "1"
+							}
+						},
+						{
 							"id": "is-touching-object",
 							"objectClass": "touch",
 							"sid": 859790544982735,
@@ -174,6 +184,16 @@
 							"sid": 845533944734486,
 							"parameters": {
 								"object": "frame"
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 397842348072293,
+							"parameters": {
+								"first-value": "touch.TouchCount",
+								"comparison": 0,
+								"second-value": "1"
 							}
 						},
 						{
@@ -301,6 +321,16 @@
 							}
 						},
 						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 134643005081817,
+							"parameters": {
+								"first-value": "touch.TouchCount",
+								"comparison": 0,
+								"second-value": "1"
+							}
+						},
+						{
 							"id": "is-touching-object",
 							"objectClass": "touch",
 							"sid": 582385807035903,
@@ -383,6 +413,16 @@
 							"sid": 846842348661728,
 							"parameters": {
 								"object": "frame"
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 535103226047908,
+							"parameters": {
+								"first-value": "touch.TouchCount",
+								"comparison": 0,
+								"second-value": "1"
 							}
 						},
 						{
@@ -485,6 +525,37 @@
 					"sid": 607324563960952
 				},
 				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-nth-touch-end",
+							"objectClass": "touch",
+							"sid": 552249550298088,
+							"parameters": {
+								"touch-number": "0"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 558414601368738,
+							"parameters": {
+								"variable": "tool",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "close",
+							"objectClass": "browser",
+							"sid": 895202433459306
+						}
+					],
+					"sid": 405228179228422
+				},
+				{
 					"eventType": "comment",
 					"text": "2"
 				},
@@ -492,9 +563,12 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "on-any-touch-start",
+							"id": "on-nth-touch-start",
 							"objectClass": "touch",
-							"sid": 662414656020724
+							"sid": 120758743383698,
+							"parameters": {
+								"touch-number": "0"
+							}
 						},
 						{
 							"id": "is-touching-object",
@@ -591,6 +665,16 @@
 							"parameters": {
 								"object": "frame"
 							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 330207952411900,
+							"parameters": {
+								"first-value": "touch.TouchCount",
+								"comparison": 0,
+								"second-value": "1"
+							}
 						}
 					],
 					"actions": [
@@ -610,9 +694,12 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "on-any-touch-end",
+							"id": "on-nth-touch-end",
 							"objectClass": "touch",
-							"sid": 262650948540299
+							"sid": 800765894345138,
+							"parameters": {
+								"touch-number": "0"
+							}
 						},
 						{
 							"id": "compare-eventvar",
@@ -678,9 +765,12 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "on-any-touch-start",
+							"id": "on-nth-touch-start",
 							"objectClass": "touch",
-							"sid": 207713737985930
+							"sid": 635398637469761,
+							"parameters": {
+								"touch-number": "0"
+							}
 						},
 						{
 							"id": "is-touching-object",
@@ -767,6 +857,16 @@
 								"instance-variable": "locked"
 							},
 							"isInverted": true
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 419513286299299,
+							"parameters": {
+								"first-value": "touch.TouchCount",
+								"comparison": 0,
+								"second-value": "1"
+							}
 						}
 					],
 					"actions": [
@@ -786,9 +886,12 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "on-any-touch-end",
+							"id": "on-nth-touch-end",
 							"objectClass": "touch",
-							"sid": 397469750199419
+							"sid": 871130325040237,
+							"parameters": {
+								"touch-number": "0"
+							}
 						}
 					],
 					"actions": [
@@ -810,21 +913,21 @@
 								{
 									"id": "compare-two-values",
 									"objectClass": "System",
-									"sid": 105862757937680,
+									"sid": 591361765582192,
 									"parameters": {
 										"first-value": "abs(area_selection.Width)",
 										"comparison": 2,
-										"second-value": "16"
+										"second-value": "9"
 									}
 								},
 								{
 									"id": "compare-two-values",
 									"objectClass": "System",
-									"sid": 744999433343009,
+									"sid": 306609975508015,
 									"parameters": {
 										"first-value": "abs(area_selection.Height)",
 										"comparison": 2,
-										"second-value": "16"
+										"second-value": "9"
 									}
 								}
 							],
@@ -1379,76 +1482,10 @@
 		{
 			"eventType": "group",
 			"disabled": false,
-			"title": "interactivity",
+			"title": "ui",
 			"description": "",
 			"isActiveOnStart": true,
 			"children": [
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "for-each",
-							"objectClass": "System",
-							"sid": 768346755212225,
-							"parameters": {
-								"object": "FRAMES"
-							}
-						}
-					],
-					"actions": [],
-					"sid": 795795997076350,
-					"children": [
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "is-boolean-instance-variable-set",
-									"objectClass": "FRAMES",
-									"sid": 303174598479073,
-									"parameters": {
-										"instance-variable": "selected"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "move-to-layer",
-									"objectClass": "FRAMES",
-									"sid": 863811663457708,
-									"parameters": {
-										"layer": "\"active\""
-									}
-								}
-							],
-							"sid": 588558418646382
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "is-boolean-instance-variable-set",
-									"objectClass": "FRAMES",
-									"sid": 528611130669583,
-									"parameters": {
-										"instance-variable": "selected"
-									},
-									"isInverted": true
-								}
-							],
-							"actions": [
-								{
-									"id": "move-to-layer",
-									"objectClass": "FRAMES",
-									"sid": 869124740262724,
-									"parameters": {
-										"layer": "\"inactive\""
-									}
-								}
-							],
-							"sid": 824226937768159
-						}
-					]
-				},
 				{
 					"eventType": "block",
 					"conditions": [
@@ -2059,11 +2096,176 @@
 		{
 			"eventType": "group",
 			"disabled": false,
-			"title": "hotkeys",
+			"title": "frames",
 			"description": "",
 			"isActiveOnStart": true,
-			"children": [],
-			"sid": 240858108178899
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "for-each",
+							"objectClass": "System",
+							"sid": 236751043427430,
+							"parameters": {
+								"object": "FRAMES"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 361224075786767,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "FRAMES",
+									"sid": 485445448050217,
+									"parameters": {
+										"instance-variable": "selected"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "move-to-layer",
+									"objectClass": "FRAMES",
+									"sid": 194710180089556,
+									"parameters": {
+										"layer": "\"active\""
+									}
+								}
+							],
+							"sid": 745584798299183
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "FRAMES",
+									"sid": 841448767889832,
+									"parameters": {
+										"instance-variable": "selected"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "move-to-layer",
+									"objectClass": "FRAMES",
+									"sid": 648211683815012,
+									"parameters": {
+										"layer": "\"inactive\""
+									}
+								}
+							],
+							"sid": 574295415502030
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 992732841606192
+						}
+					],
+					"actions": [
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 635542302089051,
+							"parameters": {
+								"object-to-create": "array",
+								"layer": "0",
+								"x": "0",
+								"y": "0",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "array",
+							"sid": 185344926339023,
+							"parameters": {
+								"instance-variable": "frame",
+								"value": "frame.UID"
+							}
+						}
+					],
+					"sid": 485195135953050
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-created",
+							"objectClass": "frame",
+							"sid": 880826627644211
+						}
+					],
+					"actions": [
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 550473500840374,
+							"parameters": {
+								"object-to-create": "array",
+								"layer": "0",
+								"x": "0",
+								"y": "0",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "array",
+							"sid": 320203857996237,
+							"parameters": {
+								"instance-variable": "frame",
+								"value": "frame.UID"
+							}
+						}
+					],
+					"sid": 591680705604660
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-destroyed",
+							"objectClass": "frame",
+							"sid": 399354559403706
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "array",
+							"sid": 949856850238621,
+							"parameters": {
+								"instance-variable": "frame",
+								"comparison": 0,
+								"value": "frame.UID"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "array",
+							"sid": 357743177819512
+						}
+					],
+					"sid": 650626553250064
+				}
+			],
+			"sid": 186772326341145
 		}
 	],
 	"sid": 940250538470575
