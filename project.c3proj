@@ -150,7 +150,8 @@
 					"ui_sliderS",
 					"ui_tool1",
 					"ui_tool2",
-					"ui_tool3"
+					"ui_tool3",
+					"ui_size"
 				],
 				"subfolders": [],
 				"name": "ui"

@@ -8,6 +8,7 @@
 		"ui_colorB",
 		"ui_colorG",
 		"ui_colorR",
-		"ui_opacity"
+		"ui_opacity",
+		"ui_size"
 	]
 }
