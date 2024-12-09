@@ -1638,7 +1638,7 @@
 		{
 			"type": "array",
 			"properties": {
-				"width": 1,
+				"width": 0,
 				"height": 1,
 				"depth": 1
 			},
@@ -1646,7 +1646,8 @@
 			"sid": 717303994510220,
 			"tags": "",
 			"instanceVariables": {
-				"frame": 0
+				"frame": 0,
+				"index": 0
 			}
 		}
 	],

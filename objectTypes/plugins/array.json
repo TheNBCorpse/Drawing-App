@@ -10,6 +10,13 @@
 			"desc": "",
 			"show": true,
 			"sid": 238021043582160
+		},
+		{
+			"name": "index",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 299071654308898
 		}
 	]
 }
