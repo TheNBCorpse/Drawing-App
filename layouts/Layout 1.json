@@ -216,6 +216,49 @@
 						"angle": 0,
 						"zElevation": 0
 					}
+				},
+				{
+					"type": "dump",
+					"properties": {
+						"initially-visible": false,
+						"initial-animation": "default",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 39,
+					"sid": 708857602289073,
+					"tags": "",
+					"instanceVariables": {
+						"frame": 0,
+						"index": 0
+					},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 708857602289073,
+						"expanded": true,
+						"folderName": "",
+						"indexInFolder": -1,
+						"folderNestingLevel": -1
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": -1748,
+						"y": -1284,
+						"width": 1920,
+						"height": 1080,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
 				}
 			],
 			"sid": 420315849085193,
@@ -1638,7 +1681,7 @@
 		{
 			"type": "array",
 			"properties": {
-				"width": 0,
+				"width": 1,
 				"height": 1,
 				"depth": 1
 			},

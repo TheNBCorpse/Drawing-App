@@ -130,7 +130,8 @@
 			},
 			{
 				"items": [
-					"frame"
+					"frame",
+					"dump"
 				],
 				"subfolders": [],
 				"name": "drawing"
