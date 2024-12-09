@@ -12,6 +12,16 @@
 			"sid": 610885230335979
 		},
 		{
+			"eventType": "variable",
+			"name": "processing",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 282553255256731
+		},
+		{
 			"eventType": "comment",
 			"text": ""
 		},
@@ -540,6 +550,7 @@
 													"id": "set-position",
 													"objectClass": "dump",
 													"sid": 851412566385373,
+													"disabled": true,
 													"parameters": {
 														"x": "1",
 														"y": "1"
@@ -599,6 +610,15 @@
 								"comparison": 0,
 								"value": "1"
 							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 971959404184650,
+							"parameters": {
+								"variable": "processing"
+							},
+							"isInverted": true
 						},
 						{
 							"id": "is-touching-object",
@@ -670,6 +690,15 @@
 								"comparison": 0,
 								"value": "1"
 							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 540917726944589,
+							"parameters": {
+								"variable": "processing"
+							},
+							"isInverted": true
 						},
 						{
 							"id": "is-touching-object",
@@ -765,6 +794,15 @@
 								"comparison": 0,
 								"value": "1"
 							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 534901301053751,
+							"parameters": {
+								"variable": "processing"
+							},
+							"isInverted": true
 						},
 						{
 							"id": "is-touching-object",
@@ -882,6 +920,31 @@
 						}
 					],
 					"sid": 607324563960952
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-nth-touch-end",
+							"objectClass": "touch",
+							"sid": 526087176820342,
+							"parameters": {
+								"touch-number": "0"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 609583297789015,
+							"parameters": {
+								"variable": "tool",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 233959403048166
 				},
 				{
 					"eventType": "block",
@@ -1039,6 +1102,7 @@
 													"id": "set-position",
 													"objectClass": "dump",
 													"sid": 761838020000902,
+													"disabled": true,
 													"parameters": {
 														"x": "1",
 														"y": "1"
@@ -1410,6 +1474,7 @@
 													"id": "set-position",
 													"objectClass": "dump",
 													"sid": 163103391418468,
+													"disabled": true,
 													"parameters": {
 														"x": "1",
 														"y": "1"
@@ -1971,41 +2036,59 @@
 							}
 						}
 					],
-					"actions": [
+					"actions": [],
+					"sid": 212178182882669,
+					"children": [
 						{
-							"id": "set-animation",
-							"objectClass": "TOOLS",
-							"sid": 540417428565879,
-							"parameters": {
-								"animation": "\"false\"",
-								"from": "beginning"
-							}
-						},
-						{
-							"id": "set-animation",
-							"objectClass": "ui_tool0",
-							"sid": 753612826877473,
-							"parameters": {
-								"animation": "\"true\"",
-								"from": "beginning"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 508438316886831,
-							"parameters": {
-								"variable": "tool",
-								"value": "0"
-							}
-						},
-						{
-							"id": "destroy",
-							"objectClass": "area_selection",
-							"sid": 941230910677428
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 464848603030996,
+									"parameters": {
+										"variable": "processing"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "TOOLS",
+									"sid": 696466556726859,
+									"parameters": {
+										"animation": "\"false\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "ui_tool0",
+									"sid": 237251104866508,
+									"parameters": {
+										"animation": "\"true\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 667179272960656,
+									"parameters": {
+										"variable": "tool",
+										"value": "0"
+									}
+								},
+								{
+									"id": "destroy",
+									"objectClass": "area_selection",
+									"sid": 521339506693383
+								}
+							],
+							"sid": 499697686976617
 						}
 					],
-					"sid": 212178182882669,
 					"isOrBlock": true
 				},
 				{
@@ -2028,41 +2111,59 @@
 							}
 						}
 					],
-					"actions": [
+					"actions": [],
+					"sid": 466680291907719,
+					"children": [
 						{
-							"id": "set-animation",
-							"objectClass": "TOOLS",
-							"sid": 800775236497020,
-							"parameters": {
-								"animation": "\"false\"",
-								"from": "beginning"
-							}
-						},
-						{
-							"id": "set-animation",
-							"objectClass": "ui_tool1",
-							"sid": 644174118445882,
-							"parameters": {
-								"animation": "\"true\"",
-								"from": "beginning"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 537185120000348,
-							"parameters": {
-								"variable": "tool",
-								"value": "1"
-							}
-						},
-						{
-							"id": "destroy",
-							"objectClass": "area_selection",
-							"sid": 886987129832454
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 957968865644026,
+									"parameters": {
+										"variable": "processing"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "TOOLS",
+									"sid": 661468792851026,
+									"parameters": {
+										"animation": "\"false\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "ui_tool1",
+									"sid": 261189079040488,
+									"parameters": {
+										"animation": "\"true\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 241486577311954,
+									"parameters": {
+										"variable": "tool",
+										"value": "1"
+									}
+								},
+								{
+									"id": "destroy",
+									"objectClass": "area_selection",
+									"sid": 574931167939890
+								}
+							],
+							"sid": 995324576524629
 						}
 					],
-					"sid": 466680291907719,
 					"isOrBlock": true
 				},
 				{
@@ -2085,41 +2186,59 @@
 							}
 						}
 					],
-					"actions": [
+					"actions": [],
+					"sid": 988841862020622,
+					"children": [
 						{
-							"id": "set-animation",
-							"objectClass": "TOOLS",
-							"sid": 798626938267131,
-							"parameters": {
-								"animation": "\"false\"",
-								"from": "beginning"
-							}
-						},
-						{
-							"id": "set-animation",
-							"objectClass": "ui_tool2",
-							"sid": 694852165853084,
-							"parameters": {
-								"animation": "\"true\"",
-								"from": "beginning"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 548127510763823,
-							"parameters": {
-								"variable": "tool",
-								"value": "2"
-							}
-						},
-						{
-							"id": "destroy",
-							"objectClass": "area_selection",
-							"sid": 704936591133592
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 819895992187515,
+									"parameters": {
+										"variable": "processing"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "TOOLS",
+									"sid": 535688175080324,
+									"parameters": {
+										"animation": "\"false\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "ui_tool2",
+									"sid": 222489960210769,
+									"parameters": {
+										"animation": "\"true\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 314120546452050,
+									"parameters": {
+										"variable": "tool",
+										"value": "2"
+									}
+								},
+								{
+									"id": "destroy",
+									"objectClass": "area_selection",
+									"sid": 904812521949355
+								}
+							],
+							"sid": 723310824552690
 						}
 					],
-					"sid": 988841862020622,
 					"isOrBlock": true
 				},
 				{
@@ -2142,41 +2261,59 @@
 							}
 						}
 					],
-					"actions": [
+					"actions": [],
+					"sid": 740538168762172,
+					"children": [
 						{
-							"id": "set-animation",
-							"objectClass": "TOOLS",
-							"sid": 742872870573135,
-							"parameters": {
-								"animation": "\"false\"",
-								"from": "beginning"
-							}
-						},
-						{
-							"id": "set-animation",
-							"objectClass": "ui_tool3",
-							"sid": 498714235604464,
-							"parameters": {
-								"animation": "\"true\"",
-								"from": "beginning"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 190790605598535,
-							"parameters": {
-								"variable": "tool",
-								"value": "3"
-							}
-						},
-						{
-							"id": "destroy",
-							"objectClass": "area_selection",
-							"sid": 944467828344522
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 366899836208459,
+									"parameters": {
+										"variable": "processing"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "TOOLS",
+									"sid": 469665005721880,
+									"parameters": {
+										"animation": "\"false\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "ui_tool3",
+									"sid": 145208941707374,
+									"parameters": {
+										"animation": "\"true\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 578432438175713,
+									"parameters": {
+										"variable": "tool",
+										"value": "3"
+									}
+								},
+								{
+									"id": "destroy",
+									"objectClass": "area_selection",
+									"sid": 343018068556680
+								}
+							],
+							"sid": 690807996484428
 						}
 					],
-					"sid": 740538168762172,
 					"isOrBlock": true
 				}
 			],
@@ -2882,10 +3019,10 @@
 						{
 							"id": "create-object",
 							"objectClass": "System",
-							"sid": 167105270564537,
+							"sid": 736958790075966,
 							"parameters": {
 								"object-to-create": "dump",
-								"layer": "\"active\"",
+								"layer": "3",
 								"x": "0",
 								"y": "0",
 								"create-hierarchy": false,
@@ -3035,6 +3172,16 @@
 									}
 								},
 								{
+									"id": "set-position",
+									"objectClass": "dump",
+									"sid": 289497990454232,
+									"disabled": true,
+									"parameters": {
+										"x": "1",
+										"y": "1"
+									}
+								},
+								{
 									"id": "clear-canvas",
 									"objectClass": "frame",
 									"sid": 181267873682319,
@@ -3045,7 +3192,7 @@
 								{
 									"id": "paste-object",
 									"objectClass": "frame",
-									"sid": 731103835074599,
+									"sid": 960432681841218,
 									"parameters": {
 										"object": "dump",
 										"effects": "with-effects"
@@ -3055,6 +3202,36 @@
 							"sid": 764000475589381
 						}
 					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 541143910921446
+						},
+						{
+							"id": "pick-all",
+							"objectClass": "System",
+							"sid": 372461096574513,
+							"parameters": {
+								"object": "dump"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position",
+							"objectClass": "dump",
+							"sid": 961014294522649,
+							"parameters": {
+								"x": "1.01",
+								"y": "1.01"
+							}
+						}
+					],
+					"sid": 894564965699060
 				}
 			],
 			"sid": 186772326341145
@@ -3097,17 +3274,27 @@
 					"sid": 931773680792009
 				},
 				{
+					"eventType": "variable",
+					"name": "zoom",
+					"type": "number",
+					"initialValue": "1",
+					"comment": "",
+					"isStatic": true,
+					"isConstant": false,
+					"sid": 388383856334632
+				},
+				{
 					"eventType": "block",
 					"conditions": [
 						{
 							"id": "every-tick",
 							"objectClass": "System",
-							"sid": 363850927045001
+							"sid": 122344621931442
 						},
 						{
 							"id": "pick-last-created",
 							"objectClass": "System",
-							"sid": 358881588001700,
+							"sid": 864370980611809,
 							"parameters": {
 								"object": "dump"
 							}
@@ -3115,7 +3302,7 @@
 						{
 							"id": "pick-last-created",
 							"objectClass": "System",
-							"sid": 273195942386064,
+							"sid": 162656564913115,
 							"parameters": {
 								"object": "frame"
 							}
@@ -3125,7 +3312,7 @@
 						{
 							"id": "set-eventvar-value",
 							"objectClass": "System",
-							"sid": 606103173904295,
+							"sid": 937656578452923,
 							"parameters": {
 								"variable": "frames",
 								"value": "dump.AnimationFrameCount"
@@ -3134,7 +3321,7 @@
 						{
 							"id": "set-eventvar-value",
 							"objectClass": "System",
-							"sid": 967929447526060,
+							"sid": 153425107159842,
 							"parameters": {
 								"variable": "canvasx",
 								"value": "frame.SurfaceDeviceWidth"
@@ -3143,14 +3330,23 @@
 						{
 							"id": "set-eventvar-value",
 							"objectClass": "System",
-							"sid": 533199491580542,
+							"sid": 279829670149404,
 							"parameters": {
 								"variable": "canvasy",
 								"value": "frame.SurfaceDeviceHeight"
 							}
+						},
+						{
+							"id": "scroll-to-position",
+							"objectClass": "System",
+							"sid": 415553775387411,
+							"parameters": {
+								"x": "0",
+								"y": "0"
+							}
 						}
 					],
-					"sid": 699378116591239
+					"sid": 396253813756392
 				},
 				{
 					"eventType": "block",
@@ -3183,14 +3379,6 @@
 							"parameters": {
 								"layer": "\"inactive\"",
 								"scale": "LayerScale(\"inactive\") + 0.1"
-							}
-						},
-						{
-							"id": "set-layout-scale",
-							"objectClass": "System",
-							"sid": 103840325879040,
-							"parameters": {
-								"scale": "LayoutScale + 0.1"
 							}
 						}
 					],
@@ -3227,14 +3415,6 @@
 							"parameters": {
 								"layer": "\"inactive\"",
 								"scale": "LayerScale(\"inactive\") - 0.1"
-							}
-						},
-						{
-							"id": "set-layout-scale",
-							"objectClass": "System",
-							"sid": 616274333309190,
-							"parameters": {
-								"scale": "LayoutScale - 0.1"
 							}
 						}
 					],
