@@ -8,13 +8,6 @@
 	"usedAddons": [
 		{
 			"type": "plugin",
-			"id": "Arr",
-			"name": "Array",
-			"author": "Scirra",
-			"bundled": false
-		},
-		{
-			"type": "plugin",
 			"id": "Browser",
 			"name": "Browser",
 			"author": "Scirra",
@@ -122,8 +115,7 @@
 					"keyboard",
 					"mouse",
 					"info",
-					"touch",
-					"array"
+					"touch"
 				],
 				"subfolders": [],
 				"name": "plugins"
