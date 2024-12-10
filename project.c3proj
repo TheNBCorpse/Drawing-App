@@ -107,9 +107,7 @@
 	],
 	"uniqueId": "qc7bxixgmpj",
 	"objectTypes": {
-		"items": [
-			"Sprite"
-		],
+		"items": [],
 		"subfolders": [
 			{
 				"items": [
@@ -296,7 +294,7 @@
 		"authorEmail": "",
 		"authorWebsite": "",
 		"appId": "com.thenbcorpse.drawing",
-		"pixelRounding": true,
+		"pixelRounding": false,
 		"zAxisScale": "normalized",
 		"fov": 0.7853981633974483,
 		"useLoaderLayout": false,

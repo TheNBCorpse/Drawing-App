@@ -226,19 +226,19 @@
 						{
 							"id": "set-eventvar-value",
 							"objectClass": "System",
-							"sid": 431652589627296,
+							"sid": 177029316687197,
 							"parameters": {
 								"variable": "touchX",
-								"value": "LayerToLayerX(\"touch\", \"active\", Sprite.X, Sprite.Y)"
+								"value": "touch.X"
 							}
 						},
 						{
 							"id": "set-eventvar-value",
 							"objectClass": "System",
-							"sid": 995509827236410,
+							"sid": 201767778832360,
 							"parameters": {
 								"variable": "touchY",
-								"value": "LayerToLayerY(\"touch\", \"active\", Sprite.X, Sprite.Y)"
+								"value": "touch.Y"
 							}
 						}
 					],
@@ -336,12 +336,12 @@
 						{
 							"id": "line",
 							"objectClass": "frame",
-							"sid": 991962608146437,
+							"sid": 348160998464778,
 							"parameters": {
 								"x1": "touchX",
 								"y1": "touchY",
-								"x2": "LayerToLayerX(\"touch\", \"active\", Sprite.X, Sprite.Y)",
-								"y2": "LayerToLayerY(\"touch\", \"active\", Sprite.X, Sprite.Y)",
+								"x2": "touch.X",
+								"y2": "touch.Y",
 								"color": "rgbEx255(int(ui_colorR.Text), int(ui_colorG.Text), int(ui_colorB.Text))",
 								"line-thickness": "size",
 								"line-cap": "butt"
@@ -350,10 +350,10 @@
 						{
 							"id": "fill-ellipse",
 							"objectClass": "frame",
-							"sid": 363515307314110,
+							"sid": 944223457270295,
 							"parameters": {
-								"x": "LayerToLayerX(\"touch\", \"active\", Sprite.X, Sprite.Y)",
-								"y": "LayerToLayerY(\"touch\", \"active\", Sprite.X, Sprite.Y)",
+								"x": "touch.X",
+								"y": "touch.Y",
 								"radius-x": "size / 2",
 								"radius-y": "size / 2",
 								"color": "rgbEx255(int(ui_colorR.Text), int(ui_colorG.Text), int(ui_colorB.Text))",
@@ -363,10 +363,10 @@
 						{
 							"id": "fill-ellipse",
 							"objectClass": "frame",
-							"sid": 986632852104881,
+							"sid": 945040277525135,
 							"parameters": {
-								"x": "LayerToLayerX(\"touch\", \"active\", Sprite.X, Sprite.Y)",
-								"y": "LayerToLayerY(\"touch\", \"active\", Sprite.X, Sprite.Y)",
+								"x": "touch.X",
+								"y": "touch.Y",
 								"radius-x": "size / 2",
 								"radius-y": "size / 2",
 								"color": "rgbEx255(int(ui_colorR.Text), int(ui_colorG.Text), int(ui_colorB.Text))",
@@ -376,19 +376,19 @@
 						{
 							"id": "set-eventvar-value",
 							"objectClass": "System",
-							"sid": 958394764843643,
+							"sid": 211486411067064,
 							"parameters": {
 								"variable": "touchX",
-								"value": "LayerToLayerX(\"touch\", \"active\", Sprite.X, Sprite.Y)"
+								"value": "touch.X"
 							}
 						},
 						{
 							"id": "set-eventvar-value",
 							"objectClass": "System",
-							"sid": 739767749649887,
+							"sid": 163577738188264,
 							"parameters": {
 								"variable": "touchY",
-								"value": "LayerToLayerY(\"touch\", \"active\", Sprite.X, Sprite.Y)"
+								"value": "touch.Y"
 							}
 						}
 					],
@@ -3174,11 +3174,11 @@
 								{
 									"id": "set-position",
 									"objectClass": "dump",
-									"sid": 289497990454232,
+									"sid": 540788012271193,
 									"disabled": true,
 									"parameters": {
-										"x": "1",
-										"y": "1"
+										"x": "961",
+										"y": "541"
 									}
 								},
 								{
@@ -3192,10 +3192,10 @@
 								{
 									"id": "paste-object",
 									"objectClass": "frame",
-									"sid": 960432681841218,
+									"sid": 769758719654833,
 									"parameters": {
 										"object": "dump",
-										"effects": "with-effects"
+										"effects": "without-effects"
 									}
 								}
 							],
@@ -3212,9 +3212,9 @@
 							"sid": 541143910921446
 						},
 						{
-							"id": "pick-all",
+							"id": "for-each",
 							"objectClass": "System",
-							"sid": 372461096574513,
+							"sid": 110857549550400,
 							"parameters": {
 								"object": "dump"
 							}
@@ -3224,14 +3224,45 @@
 						{
 							"id": "set-position",
 							"objectClass": "dump",
-							"sid": 658784122549677,
+							"sid": 558866438419531,
 							"parameters": {
-								"x": "1",
-								"y": "1"
+								"x": "1 * (LayoutScale / 2)",
+								"y": "1 * (LayoutScale / 2)"
 							}
 						}
 					],
-					"sid": 894564965699060
+					"sid": 894564965699060,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-by-comparison",
+									"objectClass": "System",
+									"sid": 720317600612170,
+									"parameters": {
+										"object": "frame",
+										"expression": "frame.UID",
+										"comparison": 0,
+										"value": "dump.frame"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-size",
+									"objectClass": "dump",
+									"sid": 277212059092331,
+									"parameters": {
+										"width": "frame.Width - 1",
+										"height": "frame.Height - 1"
+									}
+								}
+							],
+							"sid": 340419287514568,
+							"disabled": true
+						}
+					]
 				}
 			],
 			"sid": 186772326341145
@@ -3340,28 +3371,29 @@
 							"id": "scroll-to-position",
 							"objectClass": "System",
 							"sid": 415553775387411,
-							"disabled": true,
 							"parameters": {
 								"x": "0",
 								"y": "0"
 							}
 						},
 						{
-							"id": "set-layer-z-elevation",
-							"objectClass": "System",
-							"sid": 454269510254346,
+							"id": "set-size",
+							"objectClass": "dump",
+							"sid": 992212066142612,
+							"disabled": true,
 							"parameters": {
-								"layer": "\"touch\"",
-								"z-elevation": "frame.ZElevation"
+								"width": "frame.Width",
+								"height": "frame.Height"
 							}
 						},
 						{
-							"id": "set-position",
-							"objectClass": "Sprite",
-							"sid": 800348116030855,
+							"id": "set-size",
+							"objectClass": "frame",
+							"sid": 442134361512106,
+							"disabled": true,
 							"parameters": {
-								"x": "touch.X",
-								"y": "touch.Y"
+								"width": "1920 * LayoutScale",
+								"height": "1080 * LayoutScale"
 							}
 						}
 					],
@@ -3391,8 +3423,7 @@
 						{
 							"id": "set-layout-scale",
 							"objectClass": "System",
-							"sid": 748261750508678,
-							"disabled": true,
+							"sid": 447658115501942,
 							"parameters": {
 								"scale": "roundToDp(LayoutScale + 0.1, 1)"
 							}
@@ -3401,6 +3432,7 @@
 							"id": "set-z-elevation",
 							"objectClass": "frame",
 							"sid": 198330599037627,
+							"disabled": true,
 							"parameters": {
 								"z": "Self.ZElevation + 1"
 							}
@@ -3441,8 +3473,7 @@
 						{
 							"id": "set-layout-scale",
 							"objectClass": "System",
-							"sid": 475637549768525,
-							"disabled": true,
+							"sid": 128088502000217,
 							"parameters": {
 								"scale": "roundToDp(LayoutScale - 0.1, 1)"
 							}
@@ -3451,6 +3482,7 @@
 							"id": "set-z-elevation",
 							"objectClass": "frame",
 							"sid": 322385625513110,
+							"disabled": true,
 							"parameters": {
 								"z": "Self.ZElevation - 1"
 							}
