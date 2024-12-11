@@ -1,6 +1,6 @@
 {
 	"projectFormatVersion": 1,
-	"savedWithRelease": 41800,
+	"savedWithRelease": 41900,
 	"name": "drawing app",
 	"runtime": "c3",
 	"useWorker": "auto",
@@ -154,7 +154,9 @@
 					"ui_tool3",
 					"ui_size",
 					"ui_colorpreviewframe",
-					"ui_textright"
+					"ui_textright",
+					"ui_tool4",
+					"ui_tool5"
 				],
 				"subfolders": [],
 				"name": "ui"
