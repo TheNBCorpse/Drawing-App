@@ -52,7 +52,7 @@
 		{
 			"eventType": "group",
 			"disabled": false,
-			"title": "drawing",
+			"title": "tools",
 			"description": "",
 			"isActiveOnStart": true,
 			"children": [
@@ -587,6 +587,7 @@
 					]
 				},
 				{
+					"bookmark": true,
 					"eventType": "comment",
 					"text": "1"
 				},
@@ -684,110 +685,6 @@
 						{
 							"id": "compare-eventvar",
 							"objectClass": "System",
-							"sid": 741799957426453,
-							"parameters": {
-								"variable": "tool",
-								"comparison": 0,
-								"value": "1"
-							}
-						},
-						{
-							"id": "compare-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 540917726944589,
-							"parameters": {
-								"variable": "processing"
-							},
-							"isInverted": true
-						},
-						{
-							"id": "is-touching-object",
-							"objectClass": "touch",
-							"sid": 331223807718002,
-							"parameters": {
-								"object": "frame"
-							}
-						},
-						{
-							"id": "compare-two-values",
-							"objectClass": "System",
-							"sid": 134643005081817,
-							"parameters": {
-								"first-value": "touch.TouchCount",
-								"comparison": 0,
-								"second-value": "1"
-							}
-						},
-						{
-							"id": "is-touching-object",
-							"objectClass": "touch",
-							"sid": 582385807035903,
-							"parameters": {
-								"object": "ui_left"
-							},
-							"isInverted": true
-						},
-						{
-							"id": "is-touching-object",
-							"objectClass": "touch",
-							"sid": 261561395106645,
-							"parameters": {
-								"object": "ui_leftbutton"
-							},
-							"isInverted": true
-						},
-						{
-							"id": "is-touching-object",
-							"objectClass": "touch",
-							"sid": 700111371295738,
-							"parameters": {
-								"object": "ui_right"
-							},
-							"isInverted": true
-						},
-						{
-							"id": "is-touching-object",
-							"objectClass": "touch",
-							"sid": 809487643281172,
-							"parameters": {
-								"object": "ui_rightbutton"
-							},
-							"isInverted": true
-						},
-						{
-							"id": "trigger-once-while-true",
-							"objectClass": "System",
-							"sid": 148799186216292
-						}
-					],
-					"actions": [
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 704222381410482,
-							"parameters": {
-								"variable": "touchX",
-								"value": "touch.X"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 351576232149134,
-							"parameters": {
-								"variable": "touchY",
-								"value": "touch.Y"
-							}
-						}
-					],
-					"sid": 252213647342956
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
 							"sid": 369685089793490,
 							"parameters": {
 								"variable": "tool",
@@ -861,90 +758,19 @@
 					],
 					"actions": [
 						{
-							"id": "line",
+							"id": "clear-rect",
 							"objectClass": "frame",
-							"sid": 267103937772064,
+							"sid": 326380277794668,
 							"parameters": {
-								"x1": "touchX",
-								"y1": "touchY",
-								"x2": "touch.X",
-								"y2": "touch.Y",
-								"color": "rgbEx255(255, 1, 255)",
-								"line-thickness": "size",
-								"line-cap": "butt"
-							}
-						},
-						{
-							"id": "fill-ellipse",
-							"objectClass": "frame",
-							"sid": 350831423333204,
-							"parameters": {
-								"x": "touch.X",
-								"y": "touch.Y",
-								"radius-x": "size / 2",
-								"radius-y": "size / 2",
-								"color": "rgbEx255(255, 1, 255)",
-								"edge": "hard"
-							}
-						},
-						{
-							"id": "fill-ellipse",
-							"objectClass": "frame",
-							"sid": 619016268295735,
-							"parameters": {
-								"x": "touch.X",
-								"y": "touch.Y",
-								"radius-x": "size / 2",
-								"radius-y": "size / 2",
-								"color": "rgbEx255(255, 1, 255)",
-								"edge": "hard"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 982674596694229,
-							"parameters": {
-								"variable": "touchX",
-								"value": "touch.X"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 987651453999709,
-							"parameters": {
-								"variable": "touchY",
-								"value": "touch.Y"
+								"left": "touch.X - size / 2",
+								"top": "touch.Y - size / 2",
+								"right": "touch.X + size / 2",
+								"bottom": "touch.Y + size / 2",
+								"color": "rgba(0, 0, 0, 0)"
 							}
 						}
 					],
 					"sid": 607324563960952
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-nth-touch-end",
-							"objectClass": "touch",
-							"sid": 526087176820342,
-							"parameters": {
-								"touch-number": "0"
-							}
-						},
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 609583297789015,
-							"parameters": {
-								"variable": "tool",
-								"comparison": 0,
-								"value": "1"
-							}
-						}
-					],
-					"actions": [],
-					"sid": 233959403048166
 				},
 				{
 					"eventType": "block",
@@ -970,6 +796,7 @@
 					],
 					"actions": [],
 					"sid": 191915351890021,
+					"disabled": true,
 					"children": [
 						{
 							"eventType": "block",
@@ -994,6 +821,7 @@
 							],
 							"actions": [],
 							"sid": 609193236079491,
+							"disabled": true,
 							"children": [
 								{
 									"eventType": "block",
@@ -1012,6 +840,7 @@
 									],
 									"actions": [],
 									"sid": 654430105935208,
+									"disabled": true,
 									"children": [
 										{
 											"eventType": "block",
@@ -1037,7 +866,8 @@
 													}
 												}
 											],
-											"sid": 534709863762156
+											"sid": 534709863762156,
+											"disabled": true
 										},
 										{
 											"eventType": "block",
@@ -1114,7 +944,8 @@
 													"sid": 288379643944509
 												}
 											],
-											"sid": 670423096960128
+											"sid": 670423096960128,
+											"disabled": true
 										}
 									]
 								}
@@ -1134,7 +965,8 @@
 									}
 								}
 							],
-							"sid": 881609019966205
+							"sid": 881609019966205,
+							"disabled": true
 						}
 					]
 				},
@@ -1681,21 +1513,21 @@
 								{
 									"id": "compare-two-values",
 									"objectClass": "System",
-									"sid": 591361765582192,
+									"sid": 758418492903094,
 									"parameters": {
 										"first-value": "abs(area_selection.Width)",
 										"comparison": 2,
-										"second-value": "9"
+										"second-value": "10"
 									}
 								},
 								{
 									"id": "compare-two-values",
 									"objectClass": "System",
-									"sid": 306609975508015,
+									"sid": 795353934478087,
 									"parameters": {
 										"first-value": "abs(area_selection.Height)",
 										"comparison": 2,
-										"second-value": "9"
+										"second-value": "10"
 									}
 								}
 							],
@@ -1709,6 +1541,1144 @@
 							"sid": 971052697348361
 						}
 					]
+				},
+				{
+					"eventType": "comment",
+					"text": "4"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-nth-touch-end",
+							"objectClass": "touch",
+							"sid": 530944104705284,
+							"parameters": {
+								"touch-number": "0"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 525458885710367,
+							"parameters": {
+								"variable": "tool",
+								"comparison": 0,
+								"value": "4"
+							}
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "touch",
+							"sid": 219823610125658,
+							"parameters": {
+								"object": "frame"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 249562696695562,
+							"parameters": {
+								"variable": "processing"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "touch",
+							"sid": 494305576221902,
+							"parameters": {
+								"object": "ui_left"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "touch",
+							"sid": 858546817563162,
+							"parameters": {
+								"object": "ui_leftbutton"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "touch",
+							"sid": 279380700516514,
+							"parameters": {
+								"object": "ui_right"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "touch",
+							"sid": 160987863671399,
+							"parameters": {
+								"object": "ui_rightbutton"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "ui_colorR",
+							"sid": 215194144626473,
+							"parameters": {
+								"text": "ceil(frame.SnapshotRedAt(touch.X, touch.Y) * 2.55)"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "ui_colorG",
+							"sid": 525368759161369,
+							"parameters": {
+								"text": "ceil(frame.SnapshotGreenAt(touch.X, touch.Y) * 2.55)"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "ui_colorB",
+							"sid": 626611924765391,
+							"parameters": {
+								"text": "ceil(frame.SnapshotBlueAt(touch.X, touch.Y) * 2.55)"
+							}
+						},
+						{
+							"id": "log",
+							"objectClass": "browser",
+							"sid": 931282225844777,
+							"disabled": true,
+							"parameters": {
+								"type": "log",
+								"message": "frame.SnapshotRedAt(touch.X, touch.Y) & \", \" & frame.SnapshotGreenAt(touch.X, touch.Y) &\", \" & frame.SnapshotBlueAt(touch.X, touch.Y)"
+							}
+						},
+						{
+							"id": "set-value",
+							"objectClass": "ui_sliderR",
+							"sid": 399866475739925,
+							"parameters": {
+								"value": "int(ui_colorR.Text)"
+							}
+						},
+						{
+							"id": "set-value",
+							"objectClass": "ui_sliderG",
+							"sid": 468593712751186,
+							"parameters": {
+								"value": "int(ui_colorG.Text)"
+							}
+						},
+						{
+							"id": "set-value",
+							"objectClass": "ui_sliderB",
+							"sid": 305196093075624,
+							"parameters": {
+								"value": "int(ui_colorB.Text)"
+							}
+						}
+					],
+					"sid": 724394452123698
+				},
+				{
+					"eventType": "comment",
+					"text": "5"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-nth-touch-start",
+							"objectClass": "touch",
+							"sid": 175055977768638,
+							"parameters": {
+								"touch-number": "0"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 565607769415581,
+							"parameters": {
+								"variable": "tool",
+								"comparison": 0,
+								"value": "5"
+							}
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "touch",
+							"sid": 142067131415553,
+							"parameters": {
+								"object": "frame"
+							}
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "touch",
+							"sid": 476926977314823,
+							"parameters": {
+								"object": "ui_left"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "touch",
+							"sid": 504600582523846,
+							"parameters": {
+								"object": "ui_leftbutton"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "touch",
+							"sid": 744663591763987,
+							"parameters": {
+								"object": "ui_right"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "touch",
+							"sid": 266516459896205,
+							"parameters": {
+								"object": "ui_rightbutton"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 986574478418952,
+							"parameters": {
+								"variable": "valid",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 238692570038344
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 562135931845332,
+							"parameters": {
+								"variable": "tool",
+								"comparison": 0,
+								"value": "5"
+							}
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "touch",
+							"sid": 672088076302399,
+							"parameters": {
+								"object": "frame"
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 242267395568846,
+							"parameters": {
+								"first-value": "touch.TouchCount",
+								"comparison": 0,
+								"second-value": "1"
+							}
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "touch",
+							"sid": 867663179551759,
+							"parameters": {
+								"object": "ui_left"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "touch",
+							"sid": 596428716110557,
+							"parameters": {
+								"object": "ui_leftbutton"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "touch",
+							"sid": 907482007609228,
+							"parameters": {
+								"object": "ui_right"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "touch",
+							"sid": 313490721095190,
+							"parameters": {
+								"object": "ui_rightbutton"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 693607805005857
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 429109202751504,
+							"parameters": {
+								"variable": "touchX",
+								"value": "touch.X"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 843371824747898,
+							"parameters": {
+								"variable": "touchY",
+								"value": "touch.Y"
+							}
+						}
+					],
+					"sid": 458740116947535
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 145275503670284,
+							"parameters": {
+								"variable": "tool",
+								"comparison": 0,
+								"value": "5"
+							}
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "touch",
+							"sid": 976872944722093,
+							"parameters": {
+								"object": "frame"
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 945858218084115,
+							"parameters": {
+								"first-value": "touch.TouchCount",
+								"comparison": 0,
+								"second-value": "1"
+							}
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "touch",
+							"sid": 667157760124373,
+							"parameters": {
+								"object": "ui_left"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "touch",
+							"sid": 745608041100970,
+							"parameters": {
+								"object": "ui_leftbutton"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "touch",
+							"sid": 238903799960454,
+							"parameters": {
+								"object": "ui_right"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "touch",
+							"sid": 540453708051439,
+							"parameters": {
+								"object": "ui_rightbutton"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "line",
+							"objectClass": "frame",
+							"sid": 999142392104075,
+							"parameters": {
+								"x1": "touchX",
+								"y1": "touchY",
+								"x2": "touch.X",
+								"y2": "touch.Y",
+								"color": "rgbEx255(int(ui_colorR.Text), int(ui_colorG.Text), int(ui_colorB.Text))",
+								"line-thickness": "size",
+								"line-cap": "butt"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 685827947857710,
+							"parameters": {
+								"variable": "touchX",
+								"value": "touch.X"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 175424729076315,
+							"parameters": {
+								"variable": "touchY",
+								"value": "touch.Y"
+							}
+						}
+					],
+					"sid": 313206497746297
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-nth-touch-end",
+							"objectClass": "touch",
+							"sid": 254814736732974,
+							"parameters": {
+								"touch-number": "0"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 577807250212696,
+							"parameters": {
+								"variable": "tool",
+								"comparison": 0,
+								"value": "5"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 117220101837459,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 588157876445422,
+									"parameters": {
+										"variable": "valid"
+									}
+								},
+								{
+									"id": "pick-by-evaluate",
+									"objectClass": "System",
+									"sid": 864888685074718,
+									"parameters": {
+										"object": "frame",
+										"expression": "frame.selected"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 788014706642667,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "pick-by-comparison",
+											"objectClass": "System",
+											"sid": 466592262942770,
+											"parameters": {
+												"object": "dump",
+												"expression": "dump.frame",
+												"comparison": 0,
+												"value": "frame.UID"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 504935573667159,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "repeat",
+													"objectClass": "System",
+													"sid": 751337103608573,
+													"parameters": {
+														"count": "dump.AnimationFrameCount - (dump.index + 1)"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "add-remove-animation-frame",
+													"objectClass": "dump",
+													"sid": 382845284182695,
+													"parameters": {
+														"which": "remove",
+														"animation": "\"default\"",
+														"where": "-1"
+													}
+												}
+											],
+											"sid": 413974810592184
+										},
+										{
+											"eventType": "block",
+											"conditions": [],
+											"actions": [
+												{
+													"id": "save-image",
+													"objectClass": "frame",
+													"sid": 887330598665262,
+													"parameters": {
+														"format": "png",
+														"jpeg-quality": "100",
+														"x": "0",
+														"y": "0",
+														"width": "0",
+														"height": "0"
+													}
+												},
+												{
+													"id": "wait-for-previous-actions",
+													"objectClass": "System",
+													"sid": 117565821934413
+												},
+												{
+													"id": "add-remove-animation-frame",
+													"objectClass": "dump",
+													"sid": 963942285832090,
+													"parameters": {
+														"which": "add",
+														"animation": "\"default\"",
+														"where": "-1"
+													}
+												},
+												{
+													"id": "set-animation-frame",
+													"objectClass": "dump",
+													"sid": 443659909059296,
+													"parameters": {
+														"frame-number": "Self.AnimationFrameCount - 1"
+													}
+												},
+												{
+													"id": "load-image-from-url",
+													"objectClass": "dump",
+													"sid": 482320355896016,
+													"parameters": {
+														"uri": "frame.SavedImageURL",
+														"size": "resize-to-image-size",
+														"cross-origin": "anonymous"
+													}
+												},
+												{
+													"id": "set-instvar-value",
+													"objectClass": "dump",
+													"sid": 518024551145949,
+													"parameters": {
+														"instance-variable": "index",
+														"value": "Self.AnimationFrame"
+													}
+												},
+												{
+													"id": "set-position",
+													"objectClass": "dump",
+													"sid": 944868408290636,
+													"disabled": true,
+													"parameters": {
+														"x": "1",
+														"y": "1"
+													}
+												},
+												{
+													"id": "unload-unused-images",
+													"objectClass": "System",
+													"sid": 502056250372408
+												}
+											],
+											"sid": 330016652466586
+										}
+									]
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 305783056674517,
+									"parameters": {
+										"variable": "valid",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 391326608976858
+						}
+					]
+				},
+				{
+					"eventType": "comment",
+					"text": "eraser that totally won't crash your browser ;)"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 770677852949397,
+							"parameters": {
+								"variable": "tool",
+								"comparison": 0,
+								"value": "1"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 377404131971026,
+							"parameters": {
+								"variable": "processing"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "touch",
+							"sid": 196292290085365,
+							"parameters": {
+								"object": "frame"
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 582600424787046,
+							"parameters": {
+								"first-value": "touch.TouchCount",
+								"comparison": 0,
+								"second-value": "1"
+							}
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "touch",
+							"sid": 494231926081907,
+							"parameters": {
+								"object": "ui_left"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "touch",
+							"sid": 831997224951252,
+							"parameters": {
+								"object": "ui_leftbutton"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "touch",
+							"sid": 831186630567506,
+							"parameters": {
+								"object": "ui_right"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "touch",
+							"sid": 792562640113224,
+							"parameters": {
+								"object": "ui_rightbutton"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 845453029730968
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 611757910580160,
+							"parameters": {
+								"variable": "touchX",
+								"value": "touch.X"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 176940464833013,
+							"parameters": {
+								"variable": "touchY",
+								"value": "touch.Y"
+							}
+						}
+					],
+					"sid": 802312108424472,
+					"disabled": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 671285493584957,
+							"parameters": {
+								"variable": "tool",
+								"comparison": 0,
+								"value": "1"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 375182246771450,
+							"parameters": {
+								"variable": "processing"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "touch",
+							"sid": 995047260097288,
+							"parameters": {
+								"object": "frame"
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 279785788637955,
+							"parameters": {
+								"first-value": "touch.TouchCount",
+								"comparison": 0,
+								"second-value": "1"
+							}
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "touch",
+							"sid": 174547096374649,
+							"parameters": {
+								"object": "ui_left"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "touch",
+							"sid": 164000197110216,
+							"parameters": {
+								"object": "ui_leftbutton"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "touch",
+							"sid": 991158146979587,
+							"parameters": {
+								"object": "ui_right"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "touch",
+							"sid": 993261316595887,
+							"parameters": {
+								"object": "ui_rightbutton"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "line",
+							"objectClass": "frame",
+							"sid": 141482380668599,
+							"parameters": {
+								"x1": "touchX",
+								"y1": "touchY",
+								"x2": "touch.X",
+								"y2": "touch.Y",
+								"color": "rgbEx(100, 1, 100)",
+								"line-thickness": "size",
+								"line-cap": "butt"
+							}
+						},
+						{
+							"id": "fill-ellipse",
+							"objectClass": "frame",
+							"sid": 227167015124671,
+							"parameters": {
+								"x": "touch.X",
+								"y": "touch.Y",
+								"radius-x": "size / 2",
+								"radius-y": "size / 2",
+								"color": "rgbEx(100, 1, 100)",
+								"edge": "hard"
+							}
+						},
+						{
+							"id": "fill-ellipse",
+							"objectClass": "frame",
+							"sid": 328081143612870,
+							"parameters": {
+								"x": "touch.X",
+								"y": "touch.Y",
+								"radius-x": "size / 2",
+								"radius-y": "size / 2",
+								"color": "rgbEx(100, 1, 100)",
+								"edge": "hard"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 206480551129633,
+							"parameters": {
+								"variable": "touchX",
+								"value": "touch.X"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 714607530247674,
+							"parameters": {
+								"variable": "touchY",
+								"value": "touch.Y"
+							}
+						}
+					],
+					"sid": 945583548668116,
+					"disabled": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-nth-touch-end",
+							"objectClass": "touch",
+							"sid": 125283155940293,
+							"parameters": {
+								"touch-number": "0"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 687559643082832,
+							"parameters": {
+								"variable": "tool",
+								"comparison": 0,
+								"value": "1"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 479206710388069,
+							"parameters": {
+								"variable": "valid"
+							}
+						},
+						{
+							"id": "pick-by-evaluate",
+							"objectClass": "System",
+							"sid": 124483039609774,
+							"parameters": {
+								"object": "frame",
+								"expression": "frame.selected"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 605778948055937,
+							"parameters": {
+								"variable": "valid",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 594339955886985,
+							"parameters": {
+								"variable": "processing",
+								"value": "true"
+							}
+						},
+						{
+							"id": "save-snapshot",
+							"objectClass": "frame",
+							"sid": 752473104803795
+						},
+						{
+							"id": "wait-for-previous-actions",
+							"objectClass": "System",
+							"sid": 285879745735229
+						},
+						{
+							"callFunction": "Erase",
+							"sid": 641014903128852
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 716847298859352,
+							"parameters": {
+								"seconds": "3.0",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "load-snapshot",
+							"objectClass": "frame",
+							"sid": 154796664110127
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 103531776736039,
+							"parameters": {
+								"variable": "processing",
+								"value": "false"
+							}
+						}
+					],
+					"sid": 315989692056472,
+					"disabled": true
+				},
+				{
+					"eventType": "comment",
+					"text": ":)"
+				},
+				{
+					"functionName": "Erase",
+					"functionDescription": "Removes eraser marks.",
+					"functionCategory": "Drawing",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [
+						{
+							"id": "pick-by-evaluate",
+							"objectClass": "System",
+							"sid": 287670255897662,
+							"parameters": {
+								"object": "frame",
+								"expression": "frame.selected"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 125036017678340,
+					"disabled": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 272730410806584,
+									"parameters": {
+										"first-value": "frame.SnapshotRedAt(960, 540)",
+										"comparison": 0,
+										"second-value": "100"
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 788293629439064,
+									"parameters": {
+										"first-value": "frame.SnapshotGreenAt(960, 540)",
+										"comparison": 0,
+										"second-value": "1"
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 222417917145684,
+									"parameters": {
+										"first-value": "frame.SnapshotBlueAt(960, 540)",
+										"comparison": 0,
+										"second-value": "100"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "snapshot-set-pixel",
+									"objectClass": "frame",
+									"sid": 911743987327997,
+									"parameters": {
+										"x": "960",
+										"y": "540",
+										"color": "rgba(0, 0, 0, 0)"
+									}
+								},
+								{
+									"id": "close",
+									"objectClass": "browser",
+									"sid": 303939407295671
+								}
+							],
+							"sid": 351551868178922,
+							"disabled": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "for",
+									"objectClass": "System",
+									"sid": 481632974013779,
+									"parameters": {
+										"name": "\"x\"",
+										"start-index": "900",
+										"end-index": "1000"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 827516255547866,
+							"disabled": true,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "for",
+											"objectClass": "System",
+											"sid": 594866503943307,
+											"parameters": {
+												"name": "\"y\"",
+												"start-index": "500",
+												"end-index": "600"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 807566329531234,
+									"disabled": true,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 427511716992876,
+													"parameters": {
+														"first-value": "frame.SnapshotRedAt(loopindex(\"x\"), loopindex(\"y\"))",
+														"comparison": 0,
+														"second-value": "100"
+													}
+												},
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 472107285747594,
+													"disabled": true,
+													"parameters": {
+														"first-value": "frame.SnapshotGreenAt(loopindex(\"x\"), loopindex(\"y\"))",
+														"comparison": 0,
+														"second-value": "1"
+													}
+												},
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 259711682105901,
+													"disabled": true,
+													"parameters": {
+														"first-value": "frame.SnapshotBlueAt(loopindex(\"x\"), loopindex(\"y\"))",
+														"comparison": 0,
+														"second-value": "100"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "snapshot-set-pixel",
+													"objectClass": "frame",
+													"sid": 840726793953914,
+													"parameters": {
+														"x": "loopindex(\"x\")",
+														"y": "loopindex(\"y\")",
+														"color": "rgba(0, 0, 0, 0)"
+													}
+												}
+											],
+											"sid": 981349992547053,
+											"disabled": true
+										}
+									]
+								}
+							]
+						}
+					]
 				}
 			],
 			"sid": 354887901877702
@@ -1716,7 +2686,7 @@
 		{
 			"eventType": "group",
 			"disabled": false,
-			"title": "tools",
+			"title": "ui",
 			"description": "",
 			"isActiveOnStart": true,
 			"children": [
@@ -2020,6 +2990,49 @@
 					"eventType": "block",
 					"conditions": [
 						{
+							"id": "compare-text",
+							"objectClass": "ui_colorR",
+							"sid": 355307278507484,
+							"parameters": {
+								"text": "\"255\"",
+								"case": "case-insensitive"
+							}
+						},
+						{
+							"id": "compare-text",
+							"objectClass": "ui_colorG",
+							"sid": 632972811879055,
+							"parameters": {
+								"text": "\"1\"",
+								"case": "case-insensitive"
+							}
+						},
+						{
+							"id": "compare-text",
+							"objectClass": "ui_colorB",
+							"sid": 296393852746554,
+							"parameters": {
+								"text": "\"255\"",
+								"case": "case-insensitive"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "ui_colorG",
+							"sid": 731260789527803,
+							"parameters": {
+								"text": "\"0\""
+							}
+						}
+					],
+					"sid": 830579804986361
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
 							"id": "on-tap-object",
 							"objectClass": "touch",
 							"sid": 629099588189195,
@@ -2084,6 +3097,11 @@
 									"id": "destroy",
 									"objectClass": "area_selection",
 									"sid": 521339506693383
+								},
+								{
+									"id": "clear-snapshot",
+									"objectClass": "FRAMES",
+									"sid": 755814773917118
 								}
 							],
 							"sid": 499697686976617
@@ -2159,6 +3177,11 @@
 									"id": "destroy",
 									"objectClass": "area_selection",
 									"sid": 574931167939890
+								},
+								{
+									"id": "clear-snapshot",
+									"objectClass": "FRAMES",
+									"sid": 445497734208988
 								}
 							],
 							"sid": 995324576524629
@@ -2234,6 +3257,11 @@
 									"id": "destroy",
 									"objectClass": "area_selection",
 									"sid": 904812521949355
+								},
+								{
+									"id": "clear-snapshot",
+									"objectClass": "FRAMES",
+									"sid": 129112699692240
 								}
 							],
 							"sid": 723310824552690
@@ -2309,9 +3337,221 @@
 									"id": "destroy",
 									"objectClass": "area_selection",
 									"sid": 343018068556680
+								},
+								{
+									"id": "clear-snapshot",
+									"objectClass": "FRAMES",
+									"sid": 579512995822901
 								}
 							],
 							"sid": 690807996484428
+						}
+					],
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "touch",
+							"sid": 815240266259664,
+							"parameters": {
+								"object": "ui_tool4"
+							}
+						},
+						{
+							"id": "on-key-pressed",
+							"objectClass": "keyboard",
+							"sid": 588706708521578,
+							"parameters": {
+								"key": 80
+							}
+						}
+					],
+					"actions": [],
+					"sid": 966190148992276,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 298581925631251,
+									"parameters": {
+										"variable": "processing"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "TOOLS",
+									"sid": 954259559002885,
+									"parameters": {
+										"animation": "\"false\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "ui_tool4",
+									"sid": 495871735604734,
+									"parameters": {
+										"animation": "\"true\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 898462962454094,
+									"parameters": {
+										"variable": "tool",
+										"value": "4"
+									}
+								},
+								{
+									"id": "destroy",
+									"objectClass": "area_selection",
+									"sid": 132712352875242
+								},
+								{
+									"id": "clear-snapshot",
+									"objectClass": "FRAMES",
+									"sid": 288059766503915
+								}
+							],
+							"sid": 421109388275044,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "pick-by-evaluate",
+											"objectClass": "System",
+											"sid": 562457031747902,
+											"parameters": {
+												"object": "frame",
+												"expression": "frame.selected"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 195055111466424,
+											"parameters": {
+												"variable": "processing",
+												"value": "true"
+											}
+										},
+										{
+											"id": "save-snapshot",
+											"objectClass": "frame",
+											"sid": 810076224935034
+										},
+										{
+											"id": "wait-for-previous-actions",
+											"objectClass": "System",
+											"sid": 646554685837397
+										},
+										{
+											"id": "set-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 725761330266058,
+											"parameters": {
+												"variable": "processing",
+												"value": "false"
+											}
+										}
+									],
+									"sid": 727134801122579
+								}
+							]
+						}
+					],
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "touch",
+							"sid": 436556322660109,
+							"parameters": {
+								"object": "ui_tool5"
+							}
+						},
+						{
+							"id": "on-key-pressed",
+							"objectClass": "keyboard",
+							"sid": 590312395583070,
+							"parameters": {
+								"key": 68
+							}
+						}
+					],
+					"actions": [],
+					"sid": 677444634435326,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 279840942307132,
+									"parameters": {
+										"variable": "processing"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "TOOLS",
+									"sid": 997307690672397,
+									"parameters": {
+										"animation": "\"false\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "ui_tool5",
+									"sid": 621969572416944,
+									"parameters": {
+										"animation": "\"true\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 714347974461741,
+									"parameters": {
+										"variable": "tool",
+										"value": "5"
+									}
+								},
+								{
+									"id": "destroy",
+									"objectClass": "area_selection",
+									"sid": 148193054086251
+								},
+								{
+									"id": "clear-snapshot",
+									"objectClass": "FRAMES",
+									"sid": 262629858623399
+								}
+							],
+							"sid": 111146281421057
 						}
 					],
 					"isOrBlock": true
@@ -2686,14 +3926,14 @@
 								{
 									"id": "tween-one-property",
 									"objectClass": "ui_leftbutton",
-									"sid": 229882145838777,
+									"sid": 617551492151767,
 									"behaviorType": "Tween",
 									"parameters": {
 										"tags": "\"open\"",
 										"property": "offsetX",
 										"end-value": "ViewportLeft(\"ui\") + ui_left.Width",
-										"time": "0.1",
-										"ease": "default",
+										"time": "0.2",
+										"ease": "easeoutcubic",
 										"destroy-on-complete": "no",
 										"loop": "no",
 										"ping-pong": "no",
@@ -2733,14 +3973,14 @@
 								{
 									"id": "tween-one-property",
 									"objectClass": "ui_leftbutton",
-									"sid": 898378198964698,
+									"sid": 894713224255999,
 									"behaviorType": "Tween",
 									"parameters": {
 										"tags": "\"close\"",
 										"property": "offsetX",
 										"end-value": "ViewportLeft(\"ui\")",
-										"time": "0.1",
-										"ease": "default",
+										"time": "0.2",
+										"ease": "easeoutcubic",
 										"destroy-on-complete": "no",
 										"loop": "no",
 										"ping-pong": "no",
@@ -2805,14 +4045,14 @@
 								{
 									"id": "tween-one-property",
 									"objectClass": "ui_rightbutton",
-									"sid": 594347266098176,
+									"sid": 762784765426533,
 									"behaviorType": "Tween",
 									"parameters": {
 										"tags": "\"open\"",
 										"property": "offsetX",
 										"end-value": "ViewportRight(\"ui\") - ui_right.Width",
-										"time": "0.1",
-										"ease": "default",
+										"time": "0.2",
+										"ease": "easeoutcubic",
 										"destroy-on-complete": "no",
 										"loop": "no",
 										"ping-pong": "no",
@@ -2852,14 +4092,14 @@
 								{
 									"id": "tween-one-property",
 									"objectClass": "ui_rightbutton",
-									"sid": 775578199095122,
+									"sid": 302060561916555,
 									"behaviorType": "Tween",
 									"parameters": {
 										"tags": "\"close\"",
 										"property": "offsetX",
 										"end-value": "ViewportRight(\"ui\")",
-										"time": "0.1",
-										"ease": "default",
+										"time": "0.2",
+										"ease": "easeoutcubic",
 										"destroy-on-complete": "no",
 										"loop": "no",
 										"ping-pong": "no",
@@ -3103,9 +4343,115 @@
 						{
 							"id": "on-key-pressed",
 							"objectClass": "keyboard",
-							"sid": 388578340236655,
+							"sid": 143426457803742,
 							"parameters": {
 								"key": 90
+							}
+						},
+						{
+							"id": "key-is-down",
+							"objectClass": "keyboard",
+							"sid": 631490393412943,
+							"parameters": {
+								"key": 17
+							}
+						}
+					],
+					"actions": [],
+					"sid": 697667506853940,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-by-evaluate",
+									"objectClass": "System",
+									"sid": 963581408735777,
+									"parameters": {
+										"object": "frame",
+										"expression": "frame.selected"
+									}
+								},
+								{
+									"id": "pick-by-comparison",
+									"objectClass": "System",
+									"sid": 218821476489878,
+									"parameters": {
+										"object": "dump",
+										"expression": "dump.frame",
+										"comparison": 0,
+										"value": "frame.UID"
+									}
+								},
+								{
+									"id": "compare-animation-frame",
+									"objectClass": "dump",
+									"sid": 174729003292332,
+									"parameters": {
+										"comparison": 4,
+										"number": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation-frame",
+									"objectClass": "dump",
+									"sid": 130191769440822,
+									"parameters": {
+										"frame-number": "Self.index - 1"
+									}
+								},
+								{
+									"id": "subtract-from-instvar",
+									"objectClass": "dump",
+									"sid": 909100223436617,
+									"parameters": {
+										"instance-variable": "index",
+										"value": "1"
+									}
+								},
+								{
+									"id": "set-position",
+									"objectClass": "dump",
+									"sid": 180087739322514,
+									"disabled": true,
+									"parameters": {
+										"x": "961",
+										"y": "541"
+									}
+								},
+								{
+									"id": "clear-canvas",
+									"objectClass": "frame",
+									"sid": 113481644346788,
+									"parameters": {
+										"color": "rgba(0, 0, 0, 0)"
+									}
+								},
+								{
+									"id": "paste-object",
+									"objectClass": "frame",
+									"sid": 626791122364699,
+									"parameters": {
+										"object": "dump",
+										"effects": "without-effects"
+									}
+								}
+							],
+							"sid": 649060381062682
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "keyboard",
+							"sid": 492508327790312,
+							"parameters": {
+								"key": 89
 							}
 						},
 						{
@@ -3146,10 +4492,10 @@
 								{
 									"id": "compare-animation-frame",
 									"objectClass": "dump",
-									"sid": 788092263032600,
+									"sid": 818723294607801,
 									"parameters": {
-										"comparison": 4,
-										"number": "0"
+										"comparison": 2,
+										"number": "Self.AnimationFrameCount - 1"
 									}
 								}
 							],
@@ -3157,15 +4503,15 @@
 								{
 									"id": "set-animation-frame",
 									"objectClass": "dump",
-									"sid": 539756741740392,
+									"sid": 639169690997957,
 									"parameters": {
-										"frame-number": "Self.index - 1"
+										"frame-number": "Self.index + 1"
 									}
 								},
 								{
-									"id": "subtract-from-instvar",
+									"id": "add-to-instvar",
 									"objectClass": "dump",
-									"sid": 570720288803606,
+									"sid": 584386231234598,
 									"parameters": {
 										"instance-variable": "index",
 										"value": "1"
