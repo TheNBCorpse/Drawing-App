@@ -3027,7 +3027,8 @@
 							}
 						}
 					],
-					"sid": 830579804986361
+					"sid": 830579804986361,
+					"disabled": true
 				},
 				{
 					"eventType": "block",
@@ -3203,9 +3204,9 @@
 						{
 							"id": "on-key-pressed",
 							"objectClass": "keyboard",
-							"sid": 934919133197910,
+							"sid": 719419894719881,
 							"parameters": {
-								"key": 82
+								"key": 70
 							}
 						}
 					],
@@ -3303,6 +3304,15 @@
 										"variable": "processing"
 									},
 									"isInverted": true
+								},
+								{
+									"id": "key-is-down",
+									"objectClass": "keyboard",
+									"sid": 181716318954547,
+									"parameters": {
+										"key": 17
+									},
+									"isInverted": true
 								}
 							],
 							"actions": [
@@ -3363,9 +3373,9 @@
 						{
 							"id": "on-key-pressed",
 							"objectClass": "keyboard",
-							"sid": 588706708521578,
+							"sid": 641855520574501,
 							"parameters": {
-								"key": 80
+								"key": 67
 							}
 						}
 					],
@@ -3381,6 +3391,15 @@
 									"sid": 298581925631251,
 									"parameters": {
 										"variable": "processing"
+									},
+									"isInverted": true
+								},
+								{
+									"id": "key-is-down",
+									"objectClass": "keyboard",
+									"sid": 629950155071503,
+									"parameters": {
+										"key": 17
 									},
 									"isInverted": true
 								}
@@ -3482,6 +3501,166 @@
 						{
 							"id": "on-tap-object",
 							"objectClass": "touch",
+							"sid": 504386072710886,
+							"parameters": {
+								"object": "ui_tool5"
+							}
+						},
+						{
+							"id": "on-key-pressed",
+							"objectClass": "keyboard",
+							"sid": 357550291689286,
+							"parameters": {
+								"key": 82
+							}
+						}
+					],
+					"actions": [],
+					"sid": 940577623627296,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 221290089187943,
+									"parameters": {
+										"variable": "processing"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "TOOLS",
+									"sid": 565979797733786,
+									"parameters": {
+										"animation": "\"false\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "ui_tool5",
+									"sid": 951239491363783,
+									"parameters": {
+										"animation": "\"true\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 488454591208181,
+									"parameters": {
+										"variable": "tool",
+										"value": "5"
+									}
+								},
+								{
+									"id": "destroy",
+									"objectClass": "area_selection",
+									"sid": 125237951545893
+								},
+								{
+									"id": "clear-snapshot",
+									"objectClass": "FRAMES",
+									"sid": 346928299223607
+								}
+							],
+							"sid": 191590417305101
+						}
+					],
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "touch",
+							"sid": 553849488730281,
+							"parameters": {
+								"object": "ui_tool6"
+							}
+						},
+						{
+							"id": "on-key-pressed",
+							"objectClass": "keyboard",
+							"sid": 485861888452848,
+							"parameters": {
+								"key": 80
+							}
+						}
+					],
+					"actions": [],
+					"sid": 465503080376983,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 598944264779119,
+									"parameters": {
+										"variable": "processing"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "TOOLS",
+									"sid": 893810798047185,
+									"parameters": {
+										"animation": "\"false\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "ui_tool6",
+									"sid": 251170152464142,
+									"parameters": {
+										"animation": "\"true\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 337351528220062,
+									"parameters": {
+										"variable": "tool",
+										"value": "6"
+									}
+								},
+								{
+									"id": "destroy",
+									"objectClass": "area_selection",
+									"sid": 429179278611480
+								},
+								{
+									"id": "clear-snapshot",
+									"objectClass": "FRAMES",
+									"sid": 543579829773865
+								}
+							],
+							"sid": 384473371597106
+						}
+					],
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "touch",
 							"sid": 436556322660109,
 							"parameters": {
 								"object": "ui_tool5"
@@ -3490,9 +3669,9 @@
 						{
 							"id": "on-key-pressed",
 							"objectClass": "keyboard",
-							"sid": 590312395583070,
+							"sid": 189823643790030,
 							"parameters": {
-								"key": 68
+								"key": 76
 							}
 						}
 					],

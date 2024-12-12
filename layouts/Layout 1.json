@@ -459,7 +459,7 @@
 					"locked": false,
 					"world": {
 						"x": 225,
-						"y": 345,
+						"y": 300,
 						"width": 400,
 						"height": 100,
 						"originX": 0.5,
@@ -505,7 +505,7 @@
 					"locked": false,
 					"world": {
 						"x": 300,
-						"y": 100,
+						"y": 70,
 						"width": 125,
 						"height": 45,
 						"originX": 0,
@@ -549,7 +549,7 @@
 					"locked": false,
 					"world": {
 						"x": 300,
-						"y": 165,
+						"y": 130,
 						"width": 125,
 						"height": 45,
 						"originX": 0,
@@ -593,7 +593,7 @@
 					"locked": false,
 					"world": {
 						"x": 300,
-						"y": 230,
+						"y": 190,
 						"width": 125,
 						"height": 45,
 						"originX": 0,
@@ -635,7 +635,7 @@
 					"locked": false,
 					"world": {
 						"x": 25,
-						"y": 110,
+						"y": 80,
 						"width": 250,
 						"height": 25,
 						"originX": 0,
@@ -677,7 +677,7 @@
 					"locked": false,
 					"world": {
 						"x": 25,
-						"y": 175,
+						"y": 140,
 						"width": 250,
 						"height": 25,
 						"originX": 0,
@@ -719,7 +719,7 @@
 					"locked": false,
 					"world": {
 						"x": 25,
-						"y": 240,
+						"y": 200,
 						"width": 250,
 						"height": 25,
 						"originX": 0,
@@ -1005,7 +1005,7 @@
 					"locked": false,
 					"world": {
 						"x": 25,
-						"y": 25,
+						"y": 10,
 						"width": 400,
 						"height": 50,
 						"originX": 0,
@@ -1045,7 +1045,7 @@
 					"locked": false,
 					"world": {
 						"x": 50,
-						"y": 610,
+						"y": 480,
 						"width": 150,
 						"height": 100,
 						"originX": 0,
@@ -1101,7 +1101,7 @@
 					"locked": false,
 					"world": {
 						"x": 25,
-						"y": 535,
+						"y": 420,
 						"width": 400,
 						"height": 50,
 						"originX": 0,
@@ -1145,7 +1145,7 @@
 					"locked": false,
 					"world": {
 						"x": 25,
-						"y": 425,
+						"y": 375,
 						"width": 250,
 						"height": 25,
 						"originX": 0,
@@ -1183,7 +1183,7 @@
 					"locked": false,
 					"world": {
 						"x": 250,
-						"y": 610,
+						"y": 480,
 						"width": 150,
 						"height": 100,
 						"originX": 0,
@@ -1223,7 +1223,7 @@
 					"locked": false,
 					"world": {
 						"x": 50,
-						"y": 760,
+						"y": 630,
 						"width": 150,
 						"height": 100,
 						"originX": 0,
@@ -1263,7 +1263,7 @@
 					"locked": false,
 					"world": {
 						"x": 250,
-						"y": 760,
+						"y": 630,
 						"width": 150,
 						"height": 100,
 						"originX": 0,
@@ -1309,7 +1309,7 @@
 					"locked": false,
 					"world": {
 						"x": 300,
-						"y": 415,
+						"y": 365,
 						"width": 125,
 						"height": 45,
 						"originX": 0,
@@ -1347,7 +1347,7 @@
 					"locked": false,
 					"world": {
 						"x": 225,
-						"y": 345,
+						"y": 300,
 						"width": 400,
 						"height": 100,
 						"originX": 0.5,
@@ -1459,7 +1459,7 @@
 					"locked": false,
 					"world": {
 						"x": 50,
-						"y": 710,
+						"y": 580,
 						"width": 150,
 						"height": 50,
 						"originX": 0,
@@ -1515,7 +1515,7 @@
 					"locked": false,
 					"world": {
 						"x": 50,
-						"y": 860,
+						"y": 730,
 						"width": 150,
 						"height": 50,
 						"originX": 0,
@@ -1571,7 +1571,7 @@
 					"locked": false,
 					"world": {
 						"x": 250,
-						"y": 710,
+						"y": 580,
 						"width": 150,
 						"height": 50,
 						"originX": 0,
@@ -1627,7 +1627,7 @@
 					"locked": false,
 					"world": {
 						"x": 250,
-						"y": 860,
+						"y": 730,
 						"width": 150,
 						"height": 50,
 						"originX": 0,
@@ -1667,7 +1667,7 @@
 					"locked": false,
 					"world": {
 						"x": 50,
-						"y": 910,
+						"y": 780,
 						"width": 150,
 						"height": 100,
 						"originX": 0,
@@ -1707,7 +1707,7 @@
 					"locked": false,
 					"world": {
 						"x": 250,
-						"y": 910,
+						"y": 780,
 						"width": 150,
 						"height": 100,
 						"originX": 0,
@@ -1763,7 +1763,7 @@
 					"locked": false,
 					"world": {
 						"x": 50,
-						"y": 1010,
+						"y": 880,
 						"width": 150,
 						"height": 50,
 						"originX": 0,
@@ -1819,9 +1819,145 @@
 					"locked": false,
 					"world": {
 						"x": 250,
-						"y": 1012,
+						"y": 882,
 						"width": 150,
 						"height": 68,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "ui_tool6",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "false",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 43,
+					"sid": 515399435565258,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 515399435565258,
+						"expanded": true,
+						"folderName": "",
+						"indexInFolder": -1,
+						"folderNestingLevel": -1
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 50,
+						"y": 930,
+						"width": 150,
+						"height": 100,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "ui_textleft",
+					"properties": {
+						"text": "Pencil",
+						"enable-bbcode": true,
+						"font": "system-ui",
+						"size": 24,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 44,
+					"sid": 477211889269996,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 477211889269996,
+						"expanded": true,
+						"folderName": "",
+						"indexInFolder": -1,
+						"folderNestingLevel": -1
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 50,
+						"y": 1030,
+						"width": 150,
+						"height": 50,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "ui_tool7",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "false",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 45,
+					"sid": 427626478936974,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 427626478936974,
+						"expanded": true,
+						"folderName": "",
+						"indexInFolder": -1,
+						"folderNestingLevel": -1
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 250,
+						"y": 930,
+						"width": 150,
+						"height": 100,
 						"originX": 0,
 						"originY": 0,
 						"color": [

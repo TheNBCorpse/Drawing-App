@@ -156,7 +156,9 @@
 					"ui_colorpreviewframe",
 					"ui_textright",
 					"ui_tool4",
-					"ui_tool5"
+					"ui_tool5",
+					"ui_tool6",
+					"ui_tool7"
 				],
 				"subfolders": [],
 				"name": "ui"
