@@ -19,7 +19,7 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 6510332,
+						"imageSpriteId": 2504261,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
@@ -27,6 +27,31 @@
 				],
 				"sid": 925636530210678,
 				"name": "false",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 150,
+						"height": 100,
+						"originX": 0,
+						"originY": 0,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 3042994,
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 337065519899422,
+				"name": "true",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,

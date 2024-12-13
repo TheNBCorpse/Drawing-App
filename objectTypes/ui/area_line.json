@@ -1,0 +1,28 @@
+{
+	"name": "area_line",
+	"plugin-id": "TiledBg",
+	"sid": 498624805582957,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "destroy",
+			"name": "DestroyOutsideLayout",
+			"sid": 919109425356640
+		}
+	],
+	"effectTypes": [],
+	"image": {
+		"width": 100,
+		"height": 100,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "lossless",
+		"exportQuality": 0.8,
+		"fileType": "image/png",
+		"imageSpriteId": 4417620,
+		"useCollisionPoly": true,
+		"tag": ""
+	}
+}
