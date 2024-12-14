@@ -1160,6 +1160,14 @@
 									"parameters": {
 										"instance-variable": "selected"
 									}
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 936717205757336,
+									"parameters": {
+										"variable": "valid"
+									}
 								}
 							],
 							"actions": [
@@ -2869,6 +2877,14 @@
 									"sid": 541505365141980,
 									"parameters": {
 										"instance-variable": "selected"
+									}
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 247384363858860,
+									"parameters": {
+										"variable": "valid"
 									}
 								}
 							],
