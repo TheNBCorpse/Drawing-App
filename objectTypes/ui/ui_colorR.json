@@ -3,6 +3,7 @@
 	"plugin-id": "TextBox",
 	"sid": 667234642240598,
 	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
 	"behaviorTypes": []
 }

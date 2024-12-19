@@ -1,0 +1,11 @@
+{
+	"name": "RIGHT_BOXES",
+	"plugin-id": "TextBox",
+	"sid": 174971057870254,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"members": [
+		"ui_framecount",
+		"ui_framecurrent"
+	]
+}

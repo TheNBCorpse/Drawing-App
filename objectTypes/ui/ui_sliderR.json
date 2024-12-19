@@ -3,6 +3,7 @@
 	"plugin-id": "sliderbar",
 	"sid": 132380666303094,
 	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
 	"behaviorTypes": []
 }

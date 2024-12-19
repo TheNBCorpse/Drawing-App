@@ -1,7 +1,7 @@
 {
-	"name": "ui_colorG",
+	"name": "ui_framecount",
 	"plugin-id": "TextBox",
-	"sid": 294636356020273,
+	"sid": 493030500966476,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],

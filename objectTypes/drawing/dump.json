@@ -3,6 +3,7 @@
 	"plugin-id": "Sprite",
 	"sid": 705867564618738,
 	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [
 		{
 			"name": "frame",
@@ -17,6 +18,20 @@
 			"desc": "",
 			"show": true,
 			"sid": 448998302485419
+		},
+		{
+			"name": "framecount",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 777229705532311
+		},
+		{
+			"name": "selected",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 442016177891477
 		}
 	],
 	"behaviorTypes": [],

@@ -1,7 +1,7 @@
 {
-	"name": "ui_colorG",
+	"name": "ui_framecurrent",
 	"plugin-id": "TextBox",
-	"sid": 294636356020273,
+	"sid": 584291280463071,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],

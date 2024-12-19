@@ -1,7 +1,7 @@
 {
-	"name": "ui_colorG",
-	"plugin-id": "TextBox",
-	"sid": 294636356020273,
+	"name": "ui_zoom",
+	"plugin-id": "sliderbar",
+	"sid": 870875284723892,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],

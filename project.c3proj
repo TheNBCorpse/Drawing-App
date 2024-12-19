@@ -1,6 +1,6 @@
 {
 	"projectFormatVersion": 1,
-	"savedWithRelease": 41900,
+	"savedWithRelease": 42002,
 	"name": "drawing app",
 	"runtime": "c3",
 	"useWorker": "auto",
@@ -159,7 +159,15 @@
 					"ui_tool5",
 					"ui_tool6",
 					"ui_tool7",
-					"area_line"
+					"area_line",
+					"ui_frameadd",
+					"ui_frameremove",
+					"ui_framecount",
+					"ui_frameback",
+					"ui_frameforward",
+					"ui_framecurrent",
+					"ui_zoomreset",
+					"ui_zoom"
 				],
 				"subfolders": [],
 				"name": "ui"
@@ -175,7 +183,9 @@
 			"LEFT_SLIDERS",
 			"TOUCH_SPRITES",
 			"LEFT_BUTTONS",
-			"TOOLS"
+			"TOOLS",
+			"RIGHT_BUTTONS",
+			"RIGHT_BOXES"
 		],
 		"subfolders": []
 	},

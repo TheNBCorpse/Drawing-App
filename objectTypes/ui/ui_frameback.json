@@ -1,7 +1,7 @@
 {
-	"name": "ui_colorpreviewframe",
+	"name": "ui_frameback",
 	"plugin-id": "Sprite",
-	"sid": 349398503988681,
+	"sid": 892283455648812,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
@@ -12,21 +12,33 @@
 			{
 				"frames": [
 					{
-						"width": 400,
-						"height": 100,
+						"width": 76,
+						"height": 76,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 9142711,
+						"imageSpriteId": 509331,
+						"collisionPoly": {
+							"points": [
+								0,
+								0,
+								0.9868421052631579,
+								0,
+								0.9868421052631579,
+								0.9868421052631579,
+								0,
+								0.9868421052631579
+							]
+						},
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 545445483886009,
+				"sid": 901284324126154,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,
