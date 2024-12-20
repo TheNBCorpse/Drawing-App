@@ -6,13 +6,6 @@
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [
 		{
-			"name": "frame",
-			"type": "number",
-			"desc": "",
-			"show": true,
-			"sid": 615603136068382
-		},
-		{
 			"name": "index",
 			"type": "number",
 			"desc": "",
@@ -25,13 +18,6 @@
 			"desc": "",
 			"show": true,
 			"sid": 777229705532311
-		},
-		{
-			"name": "selected",
-			"type": "boolean",
-			"desc": "",
-			"show": true,
-			"sid": 442016177891477
 		}
 	],
 	"behaviorTypes": [],
