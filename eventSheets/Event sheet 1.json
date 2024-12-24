@@ -46,16 +46,6 @@
 			"sid": 455614280452529
 		},
 		{
-			"eventType": "variable",
-			"name": "index",
-			"type": "number",
-			"initialValue": "0",
-			"comment": "",
-			"isStatic": false,
-			"isConstant": false,
-			"sid": 883022028841349
-		},
-		{
 			"eventType": "comment",
 			"text": ""
 		},
@@ -449,135 +439,112 @@
 									"eventType": "block",
 									"conditions": [
 										{
-											"id": "pick-by-comparison",
+											"id": "repeat",
 											"objectClass": "System",
-											"sid": 166909067638423,
+											"sid": 647110173966817,
 											"parameters": {
-												"object": "frame",
-												"expression": "frame.index",
-												"comparison": 0,
-												"value": "int(ui_framecurrent.Text)"
+												"count": "history.AnimationFrameCount - (history.index + 1)"
 											}
 										}
 									],
-									"actions": [],
-									"sid": 147934395491180,
-									"children": [
+									"actions": [
 										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "compare-eventvar",
-													"objectClass": "System",
-													"sid": 452852521710134,
-													"parameters": {
-														"variable": "index",
-														"comparison": 2,
-														"value": "dump.Count - 1"
-													}
-												}
-											],
-											"actions": [],
-											"sid": 322782425514135,
-											"children": [
-												{
-													"eventType": "block",
-													"conditions": [
-														{
-															"id": "pick-by-comparison",
-															"objectClass": "System",
-															"sid": 524704391928448,
-															"parameters": {
-																"object": "dump",
-																"expression": "dump.index",
-																"comparison": 4,
-																"value": "index"
-															}
-														}
-													],
-													"actions": [
-														{
-															"id": "destroy",
-															"objectClass": "dump",
-															"sid": 375652553808363
-														}
-													],
-													"sid": 880981118783457
-												}
-											]
+											"id": "add-remove-animation-frame",
+											"objectClass": "history",
+											"sid": 556329060516241,
+											"parameters": {
+												"which": "remove",
+												"animation": "\"default\"",
+												"where": "-1"
+											}
+										}
+									],
+									"sid": 407638932347543
+								},
+								{
+									"eventType": "block",
+									"conditions": [],
+									"actions": [
+										{
+											"id": "set-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 390787638202468,
+											"parameters": {
+												"variable": "processing",
+												"value": "true"
+											}
 										},
 										{
-											"eventType": "block",
-											"conditions": [],
-											"actions": [
-												{
-													"id": "create-object",
-													"objectClass": "System",
-													"sid": 241364232655324,
-													"parameters": {
-														"object-to-create": "dump",
-														"layer": "\"between\"",
-														"x": "0",
-														"y": "0",
-														"create-hierarchy": false,
-														"template-name": "\"\""
-													}
-												},
-												{
-													"id": "set-instvar-value",
-													"objectClass": "dump",
-													"sid": 741097995866779,
-													"parameters": {
-														"instance-variable": "index",
-														"value": "index + 1"
-													}
-												},
-												{
-													"id": "save-image",
-													"objectClass": "frame",
-													"sid": 410902521778541,
-													"parameters": {
-														"format": "png",
-														"jpeg-quality": "100",
-														"x": "0",
-														"y": "0",
-														"width": "0",
-														"height": "0"
-													}
-												},
-												{
-													"id": "wait-for-previous-actions",
-													"objectClass": "System",
-													"sid": 405601951288445
-												},
-												{
-													"id": "load-image-from-url",
-													"objectClass": "dump",
-													"sid": 328108827830884,
-													"parameters": {
-														"uri": "frame.SavedImageURL",
-														"size": "resize-to-image-size",
-														"cross-origin": "anonymous"
-													}
-												},
-												{
-													"id": "wait-for-previous-actions",
-													"objectClass": "System",
-													"sid": 523382407159083
-												},
-												{
-													"id": "add-to-eventvar",
-													"objectClass": "System",
-													"sid": 289532595504236,
-													"parameters": {
-														"variable": "index",
-														"value": "1"
-													}
-												}
-											],
-											"sid": 133399503594095
+											"id": "save-image",
+											"objectClass": "frame",
+											"sid": 403968704762971,
+											"parameters": {
+												"format": "png",
+												"jpeg-quality": "100",
+												"x": "0",
+												"y": "0",
+												"width": "0",
+												"height": "0"
+											}
+										},
+										{
+											"id": "wait-for-previous-actions",
+											"objectClass": "System",
+											"sid": 413887832127603
+										},
+										{
+											"id": "add-remove-animation-frame",
+											"objectClass": "history",
+											"sid": 388693855503197,
+											"parameters": {
+												"which": "add",
+												"animation": "\"default\"",
+												"where": "-1"
+											}
+										},
+										{
+											"id": "set-animation-frame",
+											"objectClass": "history",
+											"sid": 862620640611379,
+											"parameters": {
+												"frame-number": "Self.AnimationFrameCount - 1"
+											}
+										},
+										{
+											"id": "load-image-from-url",
+											"objectClass": "history",
+											"sid": 636054365057117,
+											"parameters": {
+												"uri": "frame.SavedImageURL",
+												"size": "resize-to-image-size",
+												"cross-origin": "anonymous"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "history",
+											"sid": 676020180246989,
+											"parameters": {
+												"instance-variable": "index",
+												"value": "Self.AnimationFrame"
+											}
+										},
+										{
+											"id": "wait-for-previous-actions",
+											"objectClass": "System",
+											"sid": 702552137337302
+										},
+										{
+											"id": "set-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 526860746284036,
+											"parameters": {
+												"variable": "processing",
+												"value": "false"
+											}
 										}
-									]
+									],
+									"sid": 281336105589902
 								}
 							]
 						},
@@ -952,7 +919,7 @@
 						{
 							"id": "is-boolean-instance-variable-set",
 							"objectClass": "frame",
-							"sid": 772255442574212,
+							"sid": 731802600597111,
 							"parameters": {
 								"instance-variable": "selected"
 							}
@@ -960,7 +927,7 @@
 						{
 							"id": "compare-boolean-eventvar",
 							"objectClass": "System",
-							"sid": 643137678594906,
+							"sid": 459922503089108,
 							"parameters": {
 								"variable": "valid"
 							}
@@ -970,7 +937,7 @@
 						{
 							"id": "fill-rect",
 							"objectClass": "frame",
-							"sid": 367960003643752,
+							"sid": 968115694545513,
 							"parameters": {
 								"left": "area_fill.X",
 								"top": "area_fill.Y",
@@ -982,10 +949,10 @@
 						{
 							"id": "destroy",
 							"objectClass": "area_fill",
-							"sid": 901365992756489
+							"sid": 658250938732482
 						}
 					],
-					"sid": 802490307898079,
+					"sid": 185661761217134,
 					"disabled": true
 				},
 				{
@@ -2095,7 +2062,7 @@
 						{
 							"id": "is-boolean-instance-variable-set",
 							"objectClass": "frame",
-							"sid": 757389311855430,
+							"sid": 385183423286652,
 							"parameters": {
 								"instance-variable": "selected"
 							}
@@ -2103,7 +2070,7 @@
 						{
 							"id": "compare-boolean-eventvar",
 							"objectClass": "System",
-							"sid": 271605184622430,
+							"sid": 391908073969627,
 							"parameters": {
 								"variable": "valid"
 							}
@@ -2113,7 +2080,7 @@
 						{
 							"id": "line",
 							"objectClass": "frame",
-							"sid": 606952128015249,
+							"sid": 734673940239866,
 							"parameters": {
 								"x1": "area_line.X",
 								"y1": "area_line.Y",
@@ -2127,10 +2094,10 @@
 						{
 							"id": "destroy",
 							"objectClass": "area_line",
-							"sid": 734483768618672
+							"sid": 374650914509809
 						}
 					],
-					"sid": 570915260821337,
+					"sid": 189625997546404,
 					"disabled": true
 				},
 				{
@@ -3772,6 +3739,7 @@
 					"isOrBlock": true
 				},
 				{
+					"bookmark": true,
 					"eventType": "block",
 					"conditions": [
 						{
@@ -3815,6 +3783,16 @@
 									"parameters": {
 										"text": "int(Self.Text) + 1"
 									}
+								},
+								{
+									"id": "add-remove-animation-frame",
+									"objectClass": "framedata",
+									"sid": 172675477376836,
+									"parameters": {
+										"which": "add",
+										"animation": "\"default\"",
+										"where": "-1"
+									}
 								}
 							],
 							"sid": 972059289722975
@@ -3856,19 +3834,151 @@
 										"variable": "processing"
 									},
 									"isInverted": true
-								}
-							],
-							"actions": [
+								},
 								{
-									"id": "set-text",
-									"objectClass": "ui_framecount",
-									"sid": 896304757945449,
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 632970762379575,
 									"parameters": {
-										"text": "int(Self.Text) - 1"
+										"first-value": "framedata.AnimationFrameCount",
+										"comparison": 4,
+										"second-value": "1"
 									}
 								}
 							],
-							"sid": 518565334235030
+							"actions": [],
+							"sid": 518565334235030,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-animation-frame",
+											"objectClass": "framedata",
+											"sid": 588271236886956,
+											"parameters": {
+												"comparison": 0,
+												"number": "Self.AnimationFrameCount - 1"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 735665883323692,
+											"parameters": {
+												"variable": "processing",
+												"value": "true"
+											}
+										},
+										{
+											"id": "save-image",
+											"objectClass": "frame",
+											"sid": 368019974141195,
+											"parameters": {
+												"format": "png",
+												"jpeg-quality": "75",
+												"x": "0",
+												"y": "0",
+												"width": "0",
+												"height": "0"
+											}
+										},
+										{
+											"id": "wait-for-previous-actions",
+											"objectClass": "System",
+											"sid": 753143717326749
+										},
+										{
+											"id": "load-image-from-url",
+											"objectClass": "framedata",
+											"sid": 469491558144540,
+											"parameters": {
+												"uri": "frame.SavedImageURL",
+												"size": "resize-to-image-size",
+												"cross-origin": "anonymous"
+											}
+										},
+										{
+											"id": "wait-for-previous-actions",
+											"objectClass": "System",
+											"sid": 735045662892739
+										},
+										{
+											"id": "set-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 991998743534983,
+											"parameters": {
+												"variable": "processing",
+												"value": "false"
+											}
+										},
+										{
+											"id": "set-animation-frame",
+											"objectClass": "framedata",
+											"sid": 744533959193559,
+											"parameters": {
+												"frame-number": "Self.AnimationFrame - 1"
+											}
+										},
+										{
+											"id": "set-text",
+											"objectClass": "ui_framecount",
+											"sid": 969017549777294,
+											"parameters": {
+												"text": "int(Self.Text) - 1"
+											}
+										},
+										{
+											"id": "add-remove-animation-frame",
+											"objectClass": "framedata",
+											"sid": 679983785667644,
+											"parameters": {
+												"which": "remove",
+												"animation": "\"default\"",
+												"where": "-1"
+											}
+										},
+										{
+											"callFunction": "Switch Frame",
+											"sid": 919457299280749
+										}
+									],
+									"sid": 182326349920844
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 660448907338793
+										}
+									],
+									"actions": [
+										{
+											"id": "set-text",
+											"objectClass": "ui_framecount",
+											"sid": 280482533433318,
+											"parameters": {
+												"text": "int(Self.Text) - 1"
+											}
+										},
+										{
+											"id": "add-remove-animation-frame",
+											"objectClass": "framedata",
+											"sid": 814887371235372,
+											"parameters": {
+												"which": "remove",
+												"animation": "\"default\"",
+												"where": "-1"
+											}
+										}
+									],
+									"sid": 344568062820585
+								}
+							]
 						}
 					],
 					"isOrBlock": true
@@ -3907,9 +4017,69 @@
 										"variable": "processing"
 									},
 									"isInverted": true
+								},
+								{
+									"id": "compare-animation-frame",
+									"objectClass": "framedata",
+									"sid": 571054916145866,
+									"parameters": {
+										"comparison": 2,
+										"number": "Self.AnimationFrameCount - 1"
+									}
 								}
 							],
 							"actions": [
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 125633184893947,
+									"parameters": {
+										"variable": "processing",
+										"value": "true"
+									}
+								},
+								{
+									"id": "save-image",
+									"objectClass": "frame",
+									"sid": 972424162138794,
+									"parameters": {
+										"format": "png",
+										"jpeg-quality": "75",
+										"x": "0",
+										"y": "0",
+										"width": "0",
+										"height": "0"
+									}
+								},
+								{
+									"id": "wait-for-previous-actions",
+									"objectClass": "System",
+									"sid": 906320580963835
+								},
+								{
+									"id": "load-image-from-url",
+									"objectClass": "framedata",
+									"sid": 944957470258764,
+									"parameters": {
+										"uri": "frame.SavedImageURL",
+										"size": "resize-to-image-size",
+										"cross-origin": "anonymous"
+									}
+								},
+								{
+									"id": "wait-for-previous-actions",
+									"objectClass": "System",
+									"sid": 415878522595801
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 479903072460685,
+									"parameters": {
+										"variable": "processing",
+										"value": "false"
+									}
+								},
 								{
 									"id": "set-text",
 									"objectClass": "ui_framecurrent",
@@ -3917,6 +4087,18 @@
 									"parameters": {
 										"text": "int(Self.Text) + 1"
 									}
+								},
+								{
+									"id": "set-animation-frame",
+									"objectClass": "framedata",
+									"sid": 166579110223511,
+									"parameters": {
+										"frame-number": "Self.AnimationFrame + 1"
+									}
+								},
+								{
+									"callFunction": "Switch Frame",
+									"sid": 115963845048615
 								}
 							],
 							"sid": 217268774429403
@@ -3958,9 +4140,69 @@
 										"variable": "processing"
 									},
 									"isInverted": true
+								},
+								{
+									"id": "compare-animation-frame",
+									"objectClass": "framedata",
+									"sid": 336614512148555,
+									"parameters": {
+										"comparison": 4,
+										"number": "0"
+									}
 								}
 							],
 							"actions": [
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 803734249013082,
+									"parameters": {
+										"variable": "processing",
+										"value": "true"
+									}
+								},
+								{
+									"id": "save-image",
+									"objectClass": "frame",
+									"sid": 569509931808640,
+									"parameters": {
+										"format": "png",
+										"jpeg-quality": "75",
+										"x": "0",
+										"y": "0",
+										"width": "0",
+										"height": "0"
+									}
+								},
+								{
+									"id": "wait-for-previous-actions",
+									"objectClass": "System",
+									"sid": 730190053056601
+								},
+								{
+									"id": "load-image-from-url",
+									"objectClass": "framedata",
+									"sid": 628306195050732,
+									"parameters": {
+										"uri": "frame.SavedImageURL",
+										"size": "resize-to-image-size",
+										"cross-origin": "anonymous"
+									}
+								},
+								{
+									"id": "wait-for-previous-actions",
+									"objectClass": "System",
+									"sid": 266576012456044
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 648436315134820,
+									"parameters": {
+										"variable": "processing",
+										"value": "false"
+									}
+								},
 								{
 									"id": "set-text",
 									"objectClass": "ui_framecurrent",
@@ -3968,6 +4210,18 @@
 									"parameters": {
 										"text": "int(Self.Text) - 1"
 									}
+								},
+								{
+									"id": "set-animation-frame",
+									"objectClass": "framedata",
+									"sid": 260020465328038,
+									"parameters": {
+										"frame-number": "Self.AnimationFrame - 1"
+									}
+								},
+								{
+									"callFunction": "Switch Frame",
+									"sid": 381593666875127
 								}
 							],
 							"sid": 272785179209721
@@ -3976,53 +4230,109 @@
 					"isOrBlock": true
 				},
 				{
-					"bookmark": true,
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-text-changed",
-							"objectClass": "ui_framecurrent",
-							"sid": 950688620730936
-						}
-					],
+					"functionName": "Switch Frame",
+					"functionDescription": "",
+					"functionCategory": "Loading",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
 					"actions": [
 						{
-							"id": "set-eventvar-value",
+							"id": "set-boolean-eventvar",
 							"objectClass": "System",
-							"sid": 973310171511135,
+							"sid": 237104101927002,
 							"parameters": {
-								"variable": "index",
-								"value": "0"
+								"variable": "processing",
+								"value": "true"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "history",
+							"sid": 363691577199348
+						},
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 416240946779758,
+							"parameters": {
+								"object-to-create": "history",
+								"layer": "\"between\"",
+								"x": "0",
+								"y": "0",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "clear-canvas",
+							"objectClass": "frame",
+							"sid": 855620981217919,
+							"parameters": {
+								"color": "rgba(0, 0, 0, 0)"
+							}
+						},
+						{
+							"id": "paste-object",
+							"objectClass": "frame",
+							"sid": 540542034878481,
+							"parameters": {
+								"object": "framedata",
+								"effects": "with-effects"
+							}
+						},
+						{
+							"id": "wait-for-previous-actions",
+							"objectClass": "System",
+							"sid": 151115739719859
+						},
+						{
+							"id": "save-image",
+							"objectClass": "frame",
+							"sid": 777891108051306,
+							"parameters": {
+								"format": "png",
+								"jpeg-quality": "75",
+								"x": "0",
+								"y": "0",
+								"width": "0",
+								"height": "0"
+							}
+						},
+						{
+							"id": "wait-for-previous-actions",
+							"objectClass": "System",
+							"sid": 237186882950033
+						},
+						{
+							"id": "load-image-from-url",
+							"objectClass": "history",
+							"sid": 425066707806238,
+							"parameters": {
+								"uri": "frame.SavedImageURL",
+								"size": "resize-to-image-size",
+								"cross-origin": "anonymous"
+							}
+						},
+						{
+							"id": "wait-for-previous-actions",
+							"objectClass": "System",
+							"sid": 343528163920175
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 423310897142642,
+							"parameters": {
+								"variable": "processing",
+								"value": "false"
 							}
 						}
 					],
-					"sid": 216760836301849,
-					"disabled": true,
-					"children": [
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "pick-by-evaluate",
-									"objectClass": "System",
-									"sid": 886435179126658,
-									"parameters": {
-										"object": "dump",
-										"expression": "dump.index"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "destroy",
-									"objectClass": "dump",
-									"sid": 833499550568865
-								}
-							],
-							"sid": 456831284546010,
-							"disabled": true
-						}
-					]
+					"sid": 731869875114631
 				},
 				{
 					"eventType": "block",
@@ -4756,6 +5066,7 @@
 					],
 					"actions": [],
 					"sid": 166037543558986,
+					"disabled": true,
 					"children": [
 						{
 							"eventType": "block",
@@ -4782,7 +5093,8 @@
 									}
 								}
 							],
-							"sid": 260363427188834
+							"sid": 260363427188834,
+							"disabled": true
 						},
 						{
 							"eventType": "block",
@@ -4809,7 +5121,8 @@
 									}
 								}
 							],
-							"sid": 295896439298623
+							"sid": 295896439298623,
+							"disabled": true
 						}
 					]
 				},
@@ -4827,6 +5140,7 @@
 					],
 					"actions": [],
 					"sid": 361224075786767,
+					"disabled": true,
 					"children": [
 						{
 							"eventType": "block",
@@ -4850,7 +5164,8 @@
 									}
 								}
 							],
-							"sid": 745584798299183
+							"sid": 745584798299183,
+							"disabled": true
 						},
 						{
 							"eventType": "block",
@@ -4875,51 +5190,10 @@
 									}
 								}
 							],
-							"sid": 574295415502030
+							"sid": 574295415502030,
+							"disabled": true
 						}
 					]
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-start-of-layout",
-							"objectClass": "System",
-							"sid": 722862909758717
-						}
-					],
-					"actions": [
-						{
-							"id": "save-image",
-							"objectClass": "frame",
-							"sid": 814013187779070,
-							"parameters": {
-								"format": "png",
-								"jpeg-quality": "75",
-								"x": "0",
-								"y": "0",
-								"width": "0",
-								"height": "0"
-							}
-						},
-						{
-							"id": "wait-for-previous-actions",
-							"objectClass": "System",
-							"sid": 187343829006464
-						},
-						{
-							"id": "load-image-from-url",
-							"objectClass": "dump",
-							"sid": 548489429162198,
-							"parameters": {
-								"uri": "frame.SavedImageURL",
-								"size": "resize-to-image-size",
-								"cross-origin": "anonymous"
-							}
-						}
-					],
-					"sid": 281966009619063,
-					"disabled": true
 				},
 				{
 					"bookmark": true,
@@ -4949,99 +5223,52 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "compare-eventvar",
-									"objectClass": "System",
-									"sid": 298269735254097,
+									"id": "compare-animation-frame",
+									"objectClass": "history",
+									"sid": 992408938039476,
 									"parameters": {
-										"variable": "index",
 										"comparison": 4,
-										"value": "0"
+										"number": "0"
 									}
 								}
 							],
-							"actions": [],
-							"sid": 649060381062682,
-							"children": [
+							"actions": [
 								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "pick-by-comparison",
-											"objectClass": "System",
-											"sid": 838623092335035,
-											"parameters": {
-												"object": "frame",
-												"expression": "frame.index",
-												"comparison": 0,
-												"value": "int(ui_framecurrent.Text)"
-											}
-										},
-										{
-											"id": "pick-by-comparison",
-											"objectClass": "System",
-											"sid": 529723850364969,
-											"parameters": {
-												"object": "dump",
-												"expression": "dump.index",
-												"comparison": 0,
-												"value": "index - 1"
-											}
-										}
-									],
-									"actions": [
-										{
-											"id": "clear-canvas",
-											"objectClass": "frame",
-											"sid": 647331861906399,
-											"parameters": {
-												"color": "rgba(0, 0, 0, 0)"
-											}
-										},
-										{
-											"id": "wait",
-											"objectClass": "System",
-											"sid": 694314133978126,
-											"parameters": {
-												"seconds": "0.01",
-												"use-timescale": true
-											}
-										},
-										{
-											"id": "subtract-from-eventvar",
-											"objectClass": "System",
-											"sid": 275016700115561,
-											"parameters": {
-												"variable": "index",
-												"value": "1"
-											}
-										},
-										{
-											"id": "log",
-											"objectClass": "browser",
-											"sid": 445814385490580,
-											"parameters": {
-												"type": "log",
-												"message": "dump.PickedCount"
-											}
-										},
-										{
-											"id": "paste-object",
-											"objectClass": "frame",
-											"sid": 172273080427678,
-											"parameters": {
-												"object": "dump",
-												"effects": "without-effects"
-											}
-										},
-										{
-											"id": "wait-for-previous-actions",
-											"objectClass": "System",
-											"sid": 969861977413622
-										}
-									],
-									"sid": 608631890817438
+									"id": "set-animation-frame",
+									"objectClass": "history",
+									"sid": 933998573314120,
+									"parameters": {
+										"frame-number": "Self.index - 1"
+									}
+								},
+								{
+									"id": "subtract-from-instvar",
+									"objectClass": "history",
+									"sid": 626961211909046,
+									"parameters": {
+										"instance-variable": "index",
+										"value": "1"
+									}
+								},
+								{
+									"id": "clear-canvas",
+									"objectClass": "frame",
+									"sid": 121132103765425,
+									"parameters": {
+										"color": "rgba(0, 0, 0, 0)"
+									}
+								},
+								{
+									"id": "paste-object",
+									"objectClass": "frame",
+									"sid": 283492128396699,
+									"parameters": {
+										"object": "history",
+										"effects": "without-effects"
+									}
 								}
-							]
+							],
+							"sid": 434421522166126
 						}
 					]
 				},
@@ -5072,99 +5299,52 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "compare-eventvar",
-									"objectClass": "System",
-									"sid": 720611006734288,
+									"id": "compare-animation-frame",
+									"objectClass": "history",
+									"sid": 441258115745875,
 									"parameters": {
-										"variable": "index",
 										"comparison": 2,
-										"value": "dump.Count - 1"
+										"number": "Self.AnimationFrameCount - 1"
 									}
 								}
 							],
-							"actions": [],
-							"sid": 764000475589381,
-							"children": [
+							"actions": [
 								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "pick-by-comparison",
-											"objectClass": "System",
-											"sid": 260945687852994,
-											"parameters": {
-												"object": "frame",
-												"expression": "frame.index",
-												"comparison": 0,
-												"value": "int(ui_framecurrent.Text)"
-											}
-										},
-										{
-											"id": "pick-by-comparison",
-											"objectClass": "System",
-											"sid": 192449766054966,
-											"parameters": {
-												"object": "dump",
-												"expression": "dump.index",
-												"comparison": 0,
-												"value": "index + 1"
-											}
-										}
-									],
-									"actions": [
-										{
-											"id": "clear-canvas",
-											"objectClass": "frame",
-											"sid": 865196022450872,
-											"parameters": {
-												"color": "rgba(0, 0, 0, 0)"
-											}
-										},
-										{
-											"id": "wait",
-											"objectClass": "System",
-											"sid": 780033576708673,
-											"parameters": {
-												"seconds": "0.01",
-												"use-timescale": true
-											}
-										},
-										{
-											"id": "add-to-eventvar",
-											"objectClass": "System",
-											"sid": 626502334726524,
-											"parameters": {
-												"variable": "index",
-												"value": "1"
-											}
-										},
-										{
-											"id": "log",
-											"objectClass": "browser",
-											"sid": 248744298526513,
-											"parameters": {
-												"type": "log",
-												"message": "dump.PickedCount"
-											}
-										},
-										{
-											"id": "paste-object",
-											"objectClass": "frame",
-											"sid": 949607519080264,
-											"parameters": {
-												"object": "dump",
-												"effects": "without-effects"
-											}
-										},
-										{
-											"id": "wait-for-previous-actions",
-											"objectClass": "System",
-											"sid": 842021304580368
-										}
-									],
-									"sid": 365930775220028
+									"id": "set-animation-frame",
+									"objectClass": "history",
+									"sid": 530835214860385,
+									"parameters": {
+										"frame-number": "Self.index + 1"
+									}
+								},
+								{
+									"id": "add-to-instvar",
+									"objectClass": "history",
+									"sid": 320263214132382,
+									"parameters": {
+										"instance-variable": "index",
+										"value": "1"
+									}
+								},
+								{
+									"id": "clear-canvas",
+									"objectClass": "frame",
+									"sid": 904824194226763,
+									"parameters": {
+										"color": "rgba(0, 0, 0, 0)"
+									}
+								},
+								{
+									"id": "paste-object",
+									"objectClass": "frame",
+									"sid": 473697707564760,
+									"parameters": {
+										"object": "history",
+										"effects": "without-effects"
+									}
 								}
-							]
+							],
+							"sid": 814551432555430
 						}
 					]
 				},
@@ -5179,17 +5359,34 @@
 						{
 							"id": "for-each",
 							"objectClass": "System",
-							"sid": 746273710006577,
+							"sid": 110857549550400,
 							"parameters": {
-								"object": "dump"
+								"object": "history"
+							}
+						},
+						{
+							"id": "for-each",
+							"objectClass": "System",
+							"sid": 924381019089012,
+							"parameters": {
+								"object": "framedata"
 							}
 						}
 					],
 					"actions": [
 						{
 							"id": "set-position",
-							"objectClass": "dump",
+							"objectClass": "history",
 							"sid": 558866438419531,
+							"parameters": {
+								"x": "1 * (LayoutScale / 2)",
+								"y": "1 * (LayoutScale / 2)"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "framedata",
+							"sid": 845984536228243,
 							"parameters": {
 								"x": "1 * (LayoutScale / 2)",
 								"y": "1 * (LayoutScale / 2)"
@@ -5204,9 +5401,9 @@
 						{
 							"id": "compare-two-values",
 							"objectClass": "System",
-							"sid": 422794219635841,
+							"sid": 851344765294842,
 							"parameters": {
-								"first-value": "FRAMES.Count",
+								"first-value": "framedata.AnimationFrameCount",
 								"comparison": 2,
 								"second-value": "int(ui_framecount.Text)"
 							}
@@ -5214,29 +5411,18 @@
 					],
 					"actions": [
 						{
-							"id": "create-object",
-							"objectClass": "System",
-							"sid": 389083958914415,
+							"id": "add-remove-animation-frame",
+							"objectClass": "framedata",
+							"sid": 804468764546487,
 							"parameters": {
-								"object-to-create": "FRAMES",
-								"layer": "\"active\"",
-								"x": "960",
-								"y": "540",
-								"create-hierarchy": false,
-								"template-name": "\"\""
-							}
-						},
-						{
-							"id": "set-instvar-value",
-							"objectClass": "FRAMES",
-							"sid": 229078333807038,
-							"parameters": {
-								"instance-variable": "index",
-								"value": "int(ui_framecount.Text)"
+								"which": "add",
+								"animation": "\"default\"",
+								"where": "-1"
 							}
 						}
 					],
-					"sid": 572430085781717
+					"sid": 572430085781717,
+					"disabled": true
 				},
 				{
 					"eventType": "block",
@@ -5244,41 +5430,28 @@
 						{
 							"id": "compare-two-values",
 							"objectClass": "System",
-							"sid": 871423517117750,
+							"sid": 522975747293770,
 							"parameters": {
-								"first-value": "FRAMES.Count",
+								"first-value": "framedata.AnimationFrameCount",
 								"comparison": 4,
 								"second-value": "int(ui_framecount.Text)"
 							}
 						}
 					],
-					"actions": [],
-					"sid": 335317223665788,
-					"children": [
+					"actions": [
 						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "pick-by-highest-lowest-value",
-									"objectClass": "System",
-									"sid": 209808975656083,
-									"parameters": {
-										"object": "FRAMES",
-										"which": "highest",
-										"expression": "FRAMES.UID"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "destroy",
-									"objectClass": "FRAMES",
-									"sid": 745566352586294
-								}
-							],
-							"sid": 332872401892856
+							"id": "add-remove-animation-frame",
+							"objectClass": "framedata",
+							"sid": 837448655149118,
+							"parameters": {
+								"which": "remove",
+								"animation": "\"default\"",
+								"where": "-1"
+							}
 						}
-					]
+					],
+					"sid": 335317223665788,
+					"disabled": true
 				}
 			],
 			"sid": 186772326341145
@@ -5351,9 +5524,8 @@
 							"id": "for-each",
 							"objectClass": "System",
 							"sid": 407716681666889,
-							"disabled": true,
 							"parameters": {
-								"object": "dump"
+								"object": "history"
 							}
 						}
 					],
@@ -5365,7 +5537,7 @@
 							"disabled": true,
 							"parameters": {
 								"variable": "frames",
-								"value": "dump.AnimationFrameCount"
+								"value": "history.AnimationFrameCount"
 							}
 						},
 						{
@@ -5375,7 +5547,7 @@
 							"disabled": true,
 							"parameters": {
 								"variable": "canvasx",
-								"value": "distance(frame.X, 0, dump.ImagePointX(0), 0)"
+								"value": "distance(frame.X, 0, history.ImagePointX(0), 0)"
 							}
 						},
 						{
@@ -5385,7 +5557,7 @@
 							"disabled": true,
 							"parameters": {
 								"variable": "canvasy",
-								"value": "distance(0, frame.Y, 0, dump.ImagePointY(0))"
+								"value": "distance(0, frame.Y, 0, history.ImagePointY(0))"
 							}
 						},
 						{
@@ -5400,7 +5572,7 @@
 						},
 						{
 							"id": "set-size",
-							"objectClass": "dump",
+							"objectClass": "history",
 							"sid": 992212066142612,
 							"disabled": true,
 							"parameters": {
@@ -5420,20 +5592,11 @@
 						},
 						{
 							"id": "set-instvar-value",
-							"objectClass": "dump",
+							"objectClass": "history",
 							"sid": 146330744350710,
-							"disabled": true,
 							"parameters": {
 								"instance-variable": "framecount",
 								"value": "Self.AnimationFrameCount"
-							}
-						},
-						{
-							"id": "set-text",
-							"objectClass": "Text",
-							"sid": 824191194255043,
-							"parameters": {
-								"text": "dump.Count & \" dumps\" & newline & index & \" index\""
 							}
 						}
 					],
@@ -5479,7 +5642,7 @@
 						},
 						{
 							"id": "set-z-elevation",
-							"objectClass": "dump",
+							"objectClass": "history",
 							"sid": 875361235440722,
 							"disabled": true,
 							"parameters": {
@@ -5530,7 +5693,7 @@
 						},
 						{
 							"id": "set-z-elevation",
-							"objectClass": "dump",
+							"objectClass": "history",
 							"sid": 951593754599073,
 							"disabled": true,
 							"parameters": {

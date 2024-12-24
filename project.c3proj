@@ -107,9 +107,7 @@
 	],
 	"uniqueId": "qc7bxixgmpj",
 	"objectTypes": {
-		"items": [
-			"Text"
-		],
+		"items": [],
 		"subfolders": [
 			{
 				"items": [
@@ -125,7 +123,8 @@
 			{
 				"items": [
 					"frame",
-					"dump"
+					"history",
+					"framedata"
 				],
 				"subfolders": [],
 				"name": "drawing"
