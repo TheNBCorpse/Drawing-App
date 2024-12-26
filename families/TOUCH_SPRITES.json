@@ -20,6 +20,7 @@
 		"ui_frameremove",
 		"ui_frameback",
 		"ui_frameforward",
-		"ui_zoomreset"
+		"ui_zoomreset",
+		"ui_undo"
 	]
 }
