@@ -5273,6 +5273,74 @@
 					"eventType": "block",
 					"conditions": [
 						{
+							"id": "on-tap-object",
+							"objectClass": "touch",
+							"sid": 906482714333632,
+							"parameters": {
+								"object": "ui_undo"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 647080931258320,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-animation-frame",
+									"objectClass": "history",
+									"sid": 539327101175978,
+									"parameters": {
+										"comparison": 4,
+										"number": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation-frame",
+									"objectClass": "history",
+									"sid": 851990767144134,
+									"parameters": {
+										"frame-number": "Self.index - 1"
+									}
+								},
+								{
+									"id": "subtract-from-instvar",
+									"objectClass": "history",
+									"sid": 773964891981512,
+									"parameters": {
+										"instance-variable": "index",
+										"value": "1"
+									}
+								},
+								{
+									"id": "clear-canvas",
+									"objectClass": "frame",
+									"sid": 432948843879094,
+									"parameters": {
+										"color": "rgba(0, 0, 0, 0)"
+									}
+								},
+								{
+									"id": "paste-object",
+									"objectClass": "frame",
+									"sid": 649126260477580,
+									"parameters": {
+										"object": "history",
+										"effects": "without-effects"
+									}
+								}
+							],
+							"sid": 539688107034502
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
 							"id": "on-key-pressed",
 							"objectClass": "keyboard",
 							"sid": 492508327790312,
@@ -5342,6 +5410,74 @@
 								}
 							],
 							"sid": 814551432555430
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "touch",
+							"sid": 678222620235544,
+							"parameters": {
+								"object": "ui_redo"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 607161267551907,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-animation-frame",
+									"objectClass": "history",
+									"sid": 686269604483465,
+									"parameters": {
+										"comparison": 2,
+										"number": "Self.AnimationFrameCount - 1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation-frame",
+									"objectClass": "history",
+									"sid": 719752734822343,
+									"parameters": {
+										"frame-number": "Self.index + 1"
+									}
+								},
+								{
+									"id": "add-to-instvar",
+									"objectClass": "history",
+									"sid": 787763753440575,
+									"parameters": {
+										"instance-variable": "index",
+										"value": "1"
+									}
+								},
+								{
+									"id": "clear-canvas",
+									"objectClass": "frame",
+									"sid": 468130856945617,
+									"parameters": {
+										"color": "rgba(0, 0, 0, 0)"
+									}
+								},
+								{
+									"id": "paste-object",
+									"objectClass": "frame",
+									"sid": 365011403256555,
+									"parameters": {
+										"object": "history",
+										"effects": "without-effects"
+									}
+								}
+							],
+							"sid": 426766460097275
 						}
 					]
 				},

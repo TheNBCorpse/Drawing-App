@@ -11,6 +11,7 @@
 		"ui_frameback",
 		"ui_frameforward",
 		"ui_zoomreset",
-		"ui_undo"
+		"ui_undo",
+		"ui_redo"
 	]
 }

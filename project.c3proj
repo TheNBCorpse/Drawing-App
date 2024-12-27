@@ -169,7 +169,8 @@
 					"ui_framecurrent",
 					"ui_zoomreset",
 					"ui_zoom",
-					"ui_undo"
+					"ui_undo",
+					"ui_redo"
 				],
 				"subfolders": [],
 				"name": "ui"
