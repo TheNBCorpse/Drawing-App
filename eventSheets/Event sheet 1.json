@@ -5279,6 +5279,14 @@
 							"parameters": {
 								"object": "ui_undo"
 							}
+						},
+						{
+							"id": "on-double-tap-object",
+							"objectClass": "touch",
+							"sid": 418869708055480,
+							"parameters": {
+								"object": "ui_undo"
+							}
 						}
 					],
 					"actions": [],
@@ -5335,7 +5343,8 @@
 							],
 							"sid": 539688107034502
 						}
-					]
+					],
+					"isOrBlock": true
 				},
 				{
 					"eventType": "block",
@@ -5423,6 +5432,14 @@
 							"parameters": {
 								"object": "ui_redo"
 							}
+						},
+						{
+							"id": "on-double-tap-object",
+							"objectClass": "touch",
+							"sid": 388601978748312,
+							"parameters": {
+								"object": "ui_redo"
+							}
 						}
 					],
 					"actions": [],
@@ -5479,7 +5496,8 @@
 							],
 							"sid": 426766460097275
 						}
-					]
+					],
+					"isOrBlock": true
 				},
 				{
 					"eventType": "block",

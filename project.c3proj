@@ -1,6 +1,6 @@
 {
 	"projectFormatVersion": 1,
-	"savedWithRelease": 42002,
+	"savedWithRelease": 42100,
 	"name": "drawing app",
 	"runtime": "c3",
 	"useWorker": "auto",
