@@ -170,7 +170,8 @@
 					"ui_zoomreset",
 					"ui_zoom",
 					"ui_undo",
-					"ui_redo"
+					"ui_redo",
+					"ui_pan"
 				],
 				"subfolders": [],
 				"name": "ui"

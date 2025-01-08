@@ -30,7 +30,7 @@
 			"name": "tool",
 			"type": "number",
 			"initialValue": "0",
-			"comment": "0 brush 1 erase 2 rectangle 3 select",
+			"comment": "i originally had what everything was written down but there's so many tools now there's no point",
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 837726710968852
@@ -3038,6 +3038,76 @@
 						{
 							"id": "on-tap-object",
 							"objectClass": "touch",
+							"sid": 181883732210495,
+							"parameters": {
+								"object": "ui_pan"
+							}
+						},
+						{
+							"id": "on-key-pressed",
+							"objectClass": "keyboard",
+							"sid": 707224020956578,
+							"parameters": {
+								"key": 32
+							}
+						}
+					],
+					"actions": [],
+					"sid": 575664582050728,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 622437412322406,
+									"parameters": {
+										"variable": "processing"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "TOOLS",
+									"sid": 786298477495874,
+									"parameters": {
+										"animation": "\"false\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "ui_pan",
+									"sid": 667479377329605,
+									"parameters": {
+										"animation": "\"true\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 580157757270390,
+									"parameters": {
+										"variable": "tool",
+										"value": "-1"
+									}
+								}
+							],
+							"sid": 483024476202086
+						}
+					],
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "touch",
 							"sid": 629099588189195,
 							"parameters": {
 								"object": "ui_tool0"
@@ -5606,6 +5676,53 @@
 				}
 			],
 			"sid": 186772326341145
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "panning",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "variable",
+					"name": "lastX",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"isStatic": true,
+					"isConstant": false,
+					"sid": 130387932601859
+				},
+				{
+					"eventType": "variable",
+					"name": "lastY",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"isStatic": true,
+					"isConstant": false,
+					"sid": 810434787512704
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 177437924580572,
+							"parameters": {
+								"variable": "tool",
+								"comparison": 0,
+								"value": "-1"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 941694164897297
+				}
+			],
+			"sid": 431237027019953
 		},
 		{
 			"eventType": "group",
