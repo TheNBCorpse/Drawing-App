@@ -8,6 +8,20 @@
 	"usedAddons": [
 		{
 			"type": "plugin",
+			"id": "AJAX",
+			"name": "AJAX",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "BinaryData",
+			"name": "Binary Data",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "Browser",
 			"name": "Browser",
 			"author": "Scirra",
@@ -17,6 +31,13 @@
 			"type": "plugin",
 			"id": "DrawingCanvas",
 			"name": "Drawing canvas",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "FileSystem",
+			"name": "File system",
 			"author": "Scirra",
 			"bundled": false
 		},
@@ -115,7 +136,10 @@
 					"keyboard",
 					"mouse",
 					"info",
-					"touch"
+					"touch",
+					"files",
+					"data",
+					"ajax"
 				],
 				"subfolders": [],
 				"name": "plugins"
@@ -171,7 +195,8 @@
 					"ui_zoom",
 					"ui_undo",
 					"ui_redo",
-					"ui_pan"
+					"ui_pan",
+					"ui_textright2"
 				],
 				"subfolders": [],
 				"name": "ui"
@@ -307,7 +332,7 @@
 	},
 	"properties": {
 		"description": "",
-		"version": "1.0.0",
+		"version": "Alpha 1.0.0",
 		"autoIncrementVersion": false,
 		"author": "TheNBCorpse",
 		"authorEmail": "",
