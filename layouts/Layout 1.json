@@ -895,8 +895,8 @@
 					"world": {
 						"x": 450,
 						"y": 0,
-						"width": 200,
-						"height": 200,
+						"width": 176,
+						"height": 176,
 						"originX": 0,
 						"originY": 0,
 						"color": [
@@ -993,8 +993,8 @@
 					"world": {
 						"x": 1470,
 						"y": 0,
-						"width": 200,
-						"height": 200,
+						"width": 176,
+						"height": 176,
 						"originX": 1,
 						"originY": 0,
 						"color": [
@@ -3080,7 +3080,7 @@
 				{
 					"type": "ui_textright",
 					"properties": {
-						"text": "Pan",
+						"text": "version",
 						"enable-bbcode": true,
 						"font": "system-ui",
 						"size": 18,

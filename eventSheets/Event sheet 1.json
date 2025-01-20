@@ -50,6 +50,26 @@
 			"text": ""
 		},
 		{
+			"eventType": "variable",
+			"name": "width",
+			"type": "number",
+			"initialValue": "1920",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 883668444621958
+		},
+		{
+			"eventType": "variable",
+			"name": "height",
+			"type": "number",
+			"initialValue": "1080",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 125062996222489
+		},
+		{
 			"eventType": "group",
 			"disabled": false,
 			"title": "tools",
@@ -5491,10 +5511,10 @@
 						{
 							"id": "scroll-to-position",
 							"objectClass": "System",
-							"sid": 340347223138205,
+							"sid": 218165584271986,
 							"parameters": {
-								"x": "scrollx - (touch.X(\"ui\") - lastX) / LayoutScale",
-								"y": "scrolly - (touch.Y(\"ui\") - lastY) / LayoutScale"
+								"x": "clamp(scrollx - (touch.X(\"ui\") - lastX) / LayoutScale, width / 4 * -1, width * 1.25)",
+								"y": "clamp(scrolly - (touch.Y(\"ui\") - lastY) / LayoutScale, height / 4 * -1, height * 1.25)"
 							}
 						},
 						{
@@ -5576,11 +5596,11 @@
 						{
 							"id": "add-child",
 							"objectClass": "ui_leftbutton",
-							"sid": 375705531398496,
+							"sid": 413416929359967,
 							"parameters": {
 								"child": "ui_left",
 								"transform-x": true,
-								"transform-y": false,
+								"transform-y": true,
 								"transform-w": false,
 								"transform-h": false,
 								"transform-a": false,
@@ -5725,11 +5745,11 @@
 						{
 							"id": "add-child",
 							"objectClass": "ui_rightbutton",
-							"sid": 766646259270325,
+							"sid": 354234608765804,
 							"parameters": {
 								"child": "ui_right",
 								"transform-x": true,
-								"transform-y": false,
+								"transform-y": true,
 								"transform-w": false,
 								"transform-h": false,
 								"transform-a": false,
@@ -5862,95 +5882,208 @@
 							"sid": 793346630154602
 						}
 					],
-					"actions": [
+					"actions": [],
+					"sid": 431148839465151,
+					"children": [
 						{
-							"id": "stop-all-tweens",
-							"objectClass": "ui_leftbutton",
-							"sid": 140594310034919,
-							"behaviorType": "Tween"
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "ui_leftbutton",
+									"sid": 597276498842535,
+									"parameters": {
+										"instance-variable": "open"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "stop-all-tweens",
+									"objectClass": "ui_leftbutton",
+									"sid": 301999805078216,
+									"behaviorType": "Tween"
+								},
+								{
+									"id": "set-position",
+									"objectClass": "ui_leftbutton",
+									"sid": 596240685218961,
+									"parameters": {
+										"x": "ViewportLeft(\"ui\")",
+										"y": "ViewportTop(\"ui\")"
+									}
+								},
+								{
+									"id": "set-position",
+									"objectClass": "ui_left",
+									"sid": 152171067424937,
+									"disabled": true,
+									"parameters": {
+										"x": "ViewportLeft(\"ui\") - Self.Width",
+										"y": "ViewportTop(\"ui\")"
+									}
+								},
+								{
+									"id": "set-height",
+									"objectClass": "ui_left",
+									"sid": 878397380517621,
+									"parameters": {
+										"height": "ViewportHeight(\"ui\")"
+									}
+								}
+							],
+							"sid": 924532573206316
 						},
 						{
-							"id": "set-boolean-instvar",
-							"objectClass": "ui_leftbutton",
-							"sid": 142247892120526,
-							"parameters": {
-								"instance-variable": "open",
-								"value": "false"
-							}
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "ui_leftbutton",
+									"sid": 221679438403919,
+									"parameters": {
+										"instance-variable": "open"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "stop-all-tweens",
+									"objectClass": "ui_leftbutton",
+									"sid": 783545085327747,
+									"behaviorType": "Tween"
+								},
+								{
+									"id": "set-position",
+									"objectClass": "ui_leftbutton",
+									"sid": 196657907027066,
+									"parameters": {
+										"x": "ViewportLeft(\"ui\") + ui_left.Width",
+										"y": "ViewportTop(\"ui\")"
+									}
+								},
+								{
+									"id": "set-position",
+									"objectClass": "ui_left",
+									"sid": 522717572860014,
+									"disabled": true,
+									"parameters": {
+										"x": "ViewportLeft(\"ui\") - Self.Width",
+										"y": "ViewportTop(\"ui\")"
+									}
+								},
+								{
+									"id": "set-height",
+									"objectClass": "ui_left",
+									"sid": 364837517487392,
+									"parameters": {
+										"height": "ViewportHeight(\"ui\")"
+									}
+								}
+							],
+							"sid": 661458191956887
 						},
 						{
-							"id": "set-position",
-							"objectClass": "ui_leftbutton",
-							"sid": 146245867485741,
-							"parameters": {
-								"x": "ViewportLeft(\"ui\")",
-								"y": "ViewportTop(\"ui\")"
-							}
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "ui_rightbutton",
+									"sid": 737318878684499,
+									"parameters": {
+										"instance-variable": "open"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "stop-all-tweens",
+									"objectClass": "ui_rightbutton",
+									"sid": 259344737319276,
+									"behaviorType": "Tween"
+								},
+								{
+									"id": "set-position",
+									"objectClass": "ui_rightbutton",
+									"sid": 293381893995442,
+									"parameters": {
+										"x": "ViewportRight(\"ui\")",
+										"y": "ViewportTop(\"ui\")"
+									}
+								},
+								{
+									"id": "set-position",
+									"objectClass": "ui_right",
+									"sid": 844807083366664,
+									"disabled": true,
+									"parameters": {
+										"x": "ViewportRight(\"ui\") + Self.Width",
+										"y": "ViewportTop(\"ui\")"
+									}
+								},
+								{
+									"id": "set-height",
+									"objectClass": "ui_right",
+									"sid": 866941652364893,
+									"parameters": {
+										"height": "ViewportHeight(\"ui\")"
+									}
+								}
+							],
+							"sid": 259554810028365
 						},
 						{
-							"id": "set-position",
-							"objectClass": "ui_left",
-							"sid": 117136562944814,
-							"parameters": {
-								"x": "ViewportLeft(\"ui\") - Self.Width",
-								"y": "ViewportTop(\"ui\")"
-							}
-						},
-						{
-							"id": "set-height",
-							"objectClass": "ui_left",
-							"sid": 241505566746575,
-							"parameters": {
-								"height": "ViewportHeight(\"ui\")"
-							}
-						},
-						{
-							"type": "comment",
-							"text": ""
-						},
-						{
-							"id": "stop-all-tweens",
-							"objectClass": "ui_rightbutton",
-							"sid": 604863847725916,
-							"behaviorType": "Tween"
-						},
-						{
-							"id": "set-boolean-instvar",
-							"objectClass": "ui_rightbutton",
-							"sid": 860450309746384,
-							"parameters": {
-								"instance-variable": "open",
-								"value": "false"
-							}
-						},
-						{
-							"id": "set-position",
-							"objectClass": "ui_rightbutton",
-							"sid": 464808846886404,
-							"parameters": {
-								"x": "ViewportRight(\"ui\")",
-								"y": "ViewportTop(\"ui\")"
-							}
-						},
-						{
-							"id": "set-position",
-							"objectClass": "ui_right",
-							"sid": 468767453259685,
-							"parameters": {
-								"x": "ViewportRight(\"ui\") + Self.Width",
-								"y": "ViewportTop(\"ui\")"
-							}
-						},
-						{
-							"id": "set-height",
-							"objectClass": "ui_right",
-							"sid": 635659474612478,
-							"parameters": {
-								"height": "ViewportHeight(\"ui\")"
-							}
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "ui_rightbutton",
+									"sid": 306283098292860,
+									"parameters": {
+										"instance-variable": "open"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "stop-all-tweens",
+									"objectClass": "ui_rightbutton",
+									"sid": 940509390866856,
+									"behaviorType": "Tween"
+								},
+								{
+									"id": "set-position",
+									"objectClass": "ui_rightbutton",
+									"sid": 428254306345763,
+									"parameters": {
+										"x": "ViewportRight(\"ui\") -  ui_right.Width",
+										"y": "ViewportTop(\"ui\")"
+									}
+								},
+								{
+									"id": "set-position",
+									"objectClass": "ui_right",
+									"sid": 625225534643116,
+									"disabled": true,
+									"parameters": {
+										"x": "ViewportRight(\"ui\") + Self.Width",
+										"y": "ViewportTop(\"ui\")"
+									}
+								},
+								{
+									"id": "set-height",
+									"objectClass": "ui_right",
+									"sid": 960896073197829,
+									"parameters": {
+										"height": "ViewportHeight(\"ui\")"
+									}
+								}
+							],
+							"sid": 919400222553583
 						}
-					],
-					"sid": 431148839465151
+					]
 				},
 				{
 					"eventType": "block",
